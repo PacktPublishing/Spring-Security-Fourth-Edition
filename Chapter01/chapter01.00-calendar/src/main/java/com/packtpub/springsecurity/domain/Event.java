@@ -12,7 +12,7 @@ import org.hibernate.validator.constraints.NotEmpty;
  * fields are required.
  *
  * @author Rob Winch
- * @author bassLahsen 
+ * @author bassLahsen
  */
 public class Event {
 

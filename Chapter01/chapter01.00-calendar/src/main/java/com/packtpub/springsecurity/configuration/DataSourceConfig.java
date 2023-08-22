@@ -32,11 +32,20 @@ public class DataSourceConfig {
 	 */
 	private EmbeddedDatabase database = null;
 
+
 	/**
 	 * The Application context.
 	 */
-	@Autowired
-    private ApplicationContext applicationContext;
+	private ApplicationContext applicationContext;
+
+	/**
+	 * Instantiates a new Data source config.
+	 *
+	 * @param applicationContext the application context
+	 */
+	public DataSourceConfig(ApplicationContext applicationContext) {
+		this.applicationContext = applicationContext;
+	}
 
 	/**
 	 * Embedded H2 database
@@ -68,7 +77,6 @@ public class DataSourceConfig {
 	 * @return the platform transaction manager
 	 */
 	@Bean
-    @Autowired
     public PlatformTransactionManager transactionManager(final DataSource dataSource) {
         return new DataSourceTransactionManager(dataSource);
     }
@@ -80,7 +88,6 @@ public class DataSourceConfig {
 	 * @return the jdbc template
 	 */
 	@Bean
-    @Autowired
     public JdbcTemplate jdbcOperations(final DataSource dataSource){
         return new JdbcTemplate(dataSource);
     }
@@ -119,7 +126,7 @@ public class DataSourceConfig {
         SQLException sqlException = null;
 
         try {
-            applicationContext.getBean(DataSource.class)
+			applicationContext.getBean(DataSource.class)
                     .getConnection()
                     .close();
         } catch (SQLException e){

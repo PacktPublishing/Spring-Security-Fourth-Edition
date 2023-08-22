@@ -121,7 +121,7 @@ public class CalendarUser implements Principal, Serializable {
 	 *
 	 * @return password password
 	 */
-	@com.fasterxml.jackson.annotation.JsonIgnore
+	@JsonIgnore
     public String getPassword() {
         return password;
     }

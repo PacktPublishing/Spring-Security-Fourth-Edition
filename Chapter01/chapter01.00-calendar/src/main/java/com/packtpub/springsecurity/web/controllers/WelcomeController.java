@@ -28,9 +28,16 @@ public class WelcomeController {
 	/**
 	 * The Context.
 	 */
-	@Autowired
-    ApplicationContext context;
+	private ApplicationContext context;
 
+	/**
+	 * Instantiates a new Welcome controller.
+	 *
+	 * @param context the context
+	 */
+	public WelcomeController(ApplicationContext context) {
+		this.context = context;
+	}
 
 	/**
 	 * Welcome string.

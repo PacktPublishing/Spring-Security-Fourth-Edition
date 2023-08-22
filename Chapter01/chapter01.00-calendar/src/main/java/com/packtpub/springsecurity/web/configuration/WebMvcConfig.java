@@ -44,9 +44,17 @@ public class WebMvcConfig implements WebMvcConfigurer {
 	/**
 	 * The Thymeleaf view resolver.
 	 */
-	@Autowired
 	private ThymeleafViewResolver thymeleafViewResolver;
 
+	/**
+	 * Instantiates a new Web mvc config.
+	 *
+	 * @param thymeleafViewResolver the thymeleaf view resolver
+	 */
+	public WebMvcConfig(ThymeleafViewResolver thymeleafViewResolver) {
+		this.thymeleafViewResolver = thymeleafViewResolver;
+	}
+	
 	/**
 	 * We mention this in the book, but this helps to ensure that the intercept-url patterns prevent access to our
 	 * controllers. For example, once security has been applied for administrators try commenting out the modifications
