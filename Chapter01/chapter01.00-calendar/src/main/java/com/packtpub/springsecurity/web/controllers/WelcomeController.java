@@ -5,10 +5,10 @@ import java.util.Locale;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * This displays the welcome screen that shows what will be happening in this chapter.
@@ -53,4 +53,11 @@ public class WelcomeController {
         logger.info("*** welcome(): {}", name);
         return "index";
     }
+
+	/**
+	 * Return no favicon.
+	 */
+	@GetMapping(path={"favicon.ico", "favicon-16x16.jpg"})
+	@ResponseBody
+	void returnNoFavicon() {}
 }
