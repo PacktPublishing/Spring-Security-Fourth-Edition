@@ -1,0 +1,10 @@
+// Common configurations for the main project
+
+subprojects {
+	apply plugin: 'java'
+
+	repositories {
+		mavenCentral()
+	}
+
+}
