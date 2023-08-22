@@ -12,7 +12,7 @@ This code has been developed in [Gradle](http://gradle.org) and has a sub-projec
 ### Chapters
 
 ***
-1. [Anatomy of an Unsafe Application](chapter01/README.md)
+1. [Anatomy of an Unsafe Application](Chapter01/README.md)
 ***
 
 
