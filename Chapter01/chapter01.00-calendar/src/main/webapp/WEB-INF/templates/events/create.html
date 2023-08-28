@@ -2,56 +2,52 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title id="pageTitle">Create Event</title>
 
-    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+    <!--/*/ <th:block th:insert="~{fragments/headerinc :: head}"></th:block> /*/-->
 </head>
 <body>
 
 <div class="container">
-    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+    <!--/*/ <th:block th:insert="~{fragments/header :: header}"></th:block> /*/-->
 
     <!--/*--><!--@thymesVar id="createEventForm" type="com.packtpub.springsecurity.web.model.CreateEventForm"--><!--*/-->
-    <form action="#" th:action="@{/events/new}" th:object="${createEventForm}" method="post" cssClass="form-horizontal">
-        <errors path="*" element="div" cssClass="alert alert-error"/>
+    <form action="#" th:action="@{/events/new}" th:object="${createEventForm}" method="post" class="form-horizontal">
+        <div class="alert alert-danger" th:if="${#fields.hasErrors('*')}">
+            <ul>
+                <li th:each="error : ${#fields.errors('*')}" th:text="${error}"></li>
+            </ul>
+        </div>
         <fieldset>
             <legend>Event Information</legend>
-            <div class="control-group">
-                <label class="control-label" for="attendeeEmail">Attendee Email</label>
-                <div class="controls">
-                    <input class="input-xlarge" th:field="*{attendeeEmail}" id="attendeeEmail"/>
-                </div>
+            <div class="mb-3">
+                <label class="form-label" for="attendeeEmail">Attendee Email</label>
+                <input class="form-control" th:field="*{attendeeEmail}" id="attendeeEmail"/>
             </div>
-            <div class="control-group">
-                <label class="control-label" for="when">Event Date/Time (yyyy-MM-dd HH:mm)</label>
-                <div class="controls">
-                    <input class="input-xlarge" th:field="*{when}" path="when" id="when" />
-                </div>
+            <div class="mb-3">
+                <label class="form-label" for="when">Event Date/Time (yyyy-MM-dd HH:mm)</label>
+                <input class="form-control" th:field="*{when}" id="when" />
             </div>
-            <div class="control-group">
-                <label class="control-label" for="summary">Summary</label>
-                <div class="controls">
-                    <input class="input-xlarge" th:field="*{summary}" id="summary"/>
-                </div>
+            <div class="mb-3">
+                <label class="form-label" for="summary">Summary</label>
+                <input class="form-control" th:field="*{summary}" id="summary"/>
             </div>
-            <div class="control-group">
-                <label class="control-label" for="description">Description</label>
-                <div class="controls">
-                    <textarea class="input-xlarge" th:field="*{description}" id="description" rows="5" cols="25"/>
-                </div>
+            <div class="mb-3">
+                <label class="form-label" for="description">Description</label>
+                <textarea class="form-control" th:field="*{description}" id="description" rows="5"></textarea>
             </div>
-            <div class="control-group">
-                <div class="controls">
-                    <input id="submit" type="submit" value="Create"/>
-                    <input id="auto" type="submit" name="auto" value="Auto Populate Form"/>
-                </div>
+            <div class="mb-3">
+                <input class="btn btn-primary" id="submit" type="submit" value="Create"/>
+                <input class="btn btn-secondary" id="auto" type="submit" name="auto" value="Auto Populate Form"/>
             </div>
         </fieldset>
     </form>
 
 </div>
 
-<!--/*/ <th:block th:include="fragments/footer :: foot"></th:block> /*/-->
+<!--/*/ <th:block th:insert="~{fragments/footer :: foot}"></th:block> /*/-->
 
 </body>
 </html>

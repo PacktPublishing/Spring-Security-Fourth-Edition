@@ -7,11 +7,10 @@ import com.packtpub.springsecurity.dataaccess.EventDao;
 import com.packtpub.springsecurity.domain.CalendarUser;
 import com.packtpub.springsecurity.domain.Event;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 /**
- * A default implementation of {@link com.packtpub.springsecurity.service.CalendarService} that delegates to {@link EventDao} and {@link CalendarUserDao}.
+ * A default implementation of {@link CalendarService} that delegates to {@link EventDao} and {@link CalendarUserDao}.
  *
  * @author Rob Winch
  * @author bassLahsen
@@ -35,7 +34,6 @@ public class DefaultCalendarService implements CalendarService {
 	 * @param eventDao the event dao
 	 * @param userDao  the user dao
 	 */
-	@Autowired
     public DefaultCalendarService(EventDao eventDao, CalendarUserDao userDao) {
         if (eventDao == null) {
             throw new IllegalArgumentException("eventDao cannot be null");

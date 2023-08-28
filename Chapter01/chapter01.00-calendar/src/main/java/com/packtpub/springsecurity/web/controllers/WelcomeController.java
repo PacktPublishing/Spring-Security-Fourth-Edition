@@ -53,7 +53,7 @@ public class WelcomeController {
         logger.info("*** welcome(): {}", name);
         return "index";
     }
-
+	
 	/**
 	 * Return no favicon.
 	 */

@@ -9,7 +9,6 @@ import com.packtpub.springsecurity.service.UserContext;
 import com.packtpub.springsecurity.web.model.CreateEventForm;
 import jakarta.validation.Valid;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -44,7 +43,6 @@ public class EventsController {
 	 * @param calendarService the calendar service
 	 * @param userContext     the user context
 	 */
-	@Autowired
     public EventsController(CalendarService calendarService, UserContext userContext) {
         this.calendarService = calendarService;
         this.userContext = userContext;

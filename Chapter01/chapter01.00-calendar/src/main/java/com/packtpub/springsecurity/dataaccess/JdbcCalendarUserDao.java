@@ -8,7 +8,6 @@ import java.util.List;
 
 import com.packtpub.springsecurity.domain.CalendarUser;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcOperations;
 import org.springframework.jdbc.core.PreparedStatementCreator;
@@ -41,7 +40,6 @@ public class JdbcCalendarUserDao implements CalendarUserDao {
 	 *
 	 * @param jdbcOperations the jdbc operations
 	 */
-	@Autowired
     public JdbcCalendarUserDao(JdbcOperations jdbcOperations) {
         if (jdbcOperations == null) {
             throw new IllegalArgumentException("jdbcOperations cannot be null");

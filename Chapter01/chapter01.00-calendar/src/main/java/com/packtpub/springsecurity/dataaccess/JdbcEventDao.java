@@ -10,7 +10,6 @@ import java.util.List;
 import com.packtpub.springsecurity.domain.CalendarUser;
 import com.packtpub.springsecurity.domain.Event;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcOperations;
 import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.jdbc.core.RowMapper;
@@ -20,7 +19,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * A jdbc implementation of {@link com.packtpub.springsecurity.dataaccess.EventDao}.
+ * A jdbc implementation of {@link EventDao}.
  *
  * @author Rob Winch
  * @author bassLahsen
@@ -42,7 +41,6 @@ public class JdbcEventDao implements EventDao {
 	 *
 	 * @param jdbcOperations the jdbc operations
 	 */
-	@Autowired
     public JdbcEventDao(JdbcOperations jdbcOperations) {
         if (jdbcOperations == null) {
             throw new IllegalArgumentException("jdbcOperations cannot be null");

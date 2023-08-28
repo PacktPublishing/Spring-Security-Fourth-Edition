@@ -4,23 +4,23 @@
 <head>
     <title id="pageTitle">Welcome to myCalendar!</title>
 
-    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+    <!--/*/ <th:block th:insert="~{fragments/headerinc :: head}"></th:block> /*/-->
 </head>
 <body>
 
 <div class="container">
-    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+    <!--/*/ <th:block th:insert="~{fragments/header :: header}"></th:block> /*/-->
 
     <p>Chapter 01.00: Below you can find some highlights about myCalendar. Each sample will have a slightly different summary depending on what has been done.</p>
     <p>Below you can find some highlights about myCalendar. Each chapter will have a slightly different summary depending on what will be done.</p>
     <ul>
-        <li><a id="eventsLink" th:href="@{/events/}">All Events</a> - shows all events for all users. Once secured, this will only be viewable by administrators.</li>
-        <li><a id="myEventsLink" th:href="@{events/my}">My Events</a> - shows all events that user1@example.com is the owner or attendee. Once we apply security only a logged in user
+        <li><a id="eventsLink" class="link-primary"  th:href="@{/events/}">All Events</a> - shows all events for all users. Once secured, this will only be viewable by administrators.</li>
+        <li><a id="myEventsLink" class="link-secondary" th:href="@{events/my}">My Events</a> - shows all events that user1@example.com is the owner or attendee. Once we apply security only a logged in user
             will be able to view this page. Additionally, the logged in user will be used rather than always using user1@example.com</li>
-        <li><a id="createEventLink" th:href="@{events/form}">Create Event</a> - will allow creating a new Event with user1@example.com as the owner. Once we add security, only a logged in
+        <li><a id="createEventLink" class="link-success" th:href="@{events/form}">Create Event</a> - will allow creating a new Event with user1@example.com as the owner. Once we add security, only a logged in
             user will be able to view this page. Additionally, the logged in user will be the owner rather than always using user1@example.com.</li>
         <li>
-            <a id="h2Link" th:href="@{admin/h2/}" target="_blank">H2 Database Console</a> - Allows you to interact with the database using a web console. To use it:
+            <a id="h2Link" class="link-warning" th:href="@{admin/h2/}" target="_blank">H2 Database Console</a> - Allows you to interact with the database using a web console. To use it:
             <ul>
                 <li>Click the link above.</li>
                 <li>Ensure that Generic H2 (Embedded) is selected</li>
@@ -35,7 +35,7 @@
 
 </div>
 
-<!--/*/ <th:block th:include="fragments/footer :: foot"></th:block> /*/-->
+<!--/*/ <th:block th:insert="~{fragments/footer :: foot}"></th:block> /*/-->
 
 </body>
 </html>

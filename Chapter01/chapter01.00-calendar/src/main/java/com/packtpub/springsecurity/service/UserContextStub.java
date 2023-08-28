@@ -3,7 +3,6 @@ package com.packtpub.springsecurity.service;
 import com.packtpub.springsecurity.dataaccess.CalendarUserDao;
 import com.packtpub.springsecurity.domain.CalendarUser;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -31,7 +30,6 @@ public class UserContextStub implements UserContext {
 	 *
 	 * @param userService the user service
 	 */
-	@Autowired
     public UserContextStub(CalendarUserDao userService) {
         if (userService == null) {
             throw new IllegalArgumentException("userService cannot be null");

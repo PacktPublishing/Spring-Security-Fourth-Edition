@@ -2,22 +2,28 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title id="pageTitle">My Events</title>
 
-    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+    <!--/*/ <th:block th:insert="~{fragments/headerinc :: head}"></th:block> /*/-->
 </head>
 <body>
 
 <div class="container">
-    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+    <!--/*/ <th:block th:insert="~{fragments/header :: header}"></th:block> /*/-->
+
+    <div th:if="${message != null}" class="alert alert-success">
+        <span th:text="${message}"></span>
+    </div>
 
     <p id="description">
         Below you can find the events for
         <strong th:text="${currentUser.email}"></strong>.
-        Once security is applied this will be the events for the currently logged in user.
+        Once security is applied, these will be the events for the currently logged-in user.
     </p>
-    <div id="create" class="pull-right"><a th:href="@{/events/form}">Create Event</a></div>
-    <table class="table table-bordered table-striped table-condensed">
+    <div id="create" class="text-end"><a th:href="@{/events/form}">Create Event</a></div>
+    <table class="table table-bordered table-striped">
         <thead>
         <tr>
             <th>Date/Time</th>
@@ -35,7 +41,7 @@
             <td th:text="${#calendars.format(event.dateWhen, 'yyyy-MM-dd HH:mm')}">today</td>
             <td th:text="${event.owner.name}">Chuck Norris</td>
             <td th:text="${event.attendee.name}">Mick Knutson</td>
-s
+
             <td><a th:href="@{'/events/{id}'(id=${event.id})}" th:text="${event.summary}">-1</a></td>
         </tr>
         </tbody>
@@ -43,7 +49,7 @@ s
 
 </div>
 
-<!--/*/ <th:block th:include="fragments/footer :: foot"></th:block> /*/-->
+<!-- Include Bootstrap 5 JavaScript (You need to add the actual Bootstrap 5 JavaScript link) -->
 
 </body>
 </html>
