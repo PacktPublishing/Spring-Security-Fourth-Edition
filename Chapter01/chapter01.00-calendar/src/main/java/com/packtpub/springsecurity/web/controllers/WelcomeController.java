@@ -23,7 +23,7 @@ public class WelcomeController {
 	 * The constant logger.
 	 */
 	private static final Logger logger = LoggerFactory
-            .getLogger(WelcomeController.class);
+			.getLogger(WelcomeController.class);
 
 	/**
 	 * The Context.
@@ -44,20 +44,21 @@ public class WelcomeController {
 	 *
 	 * @return the string
 	 */
-	@GetMapping(value="/")
-    public String welcome() {
-        String name = context.getMessage("customer.name",
-                new Object[] { 46,"http://www.baselogic.com" }, Locale.US);
+	@GetMapping(value = "/")
+	public String welcome() {
+		String name = context.getMessage("customer.name",
+				new Object[] { 46, "http://www.baselogic.com" }, Locale.US);
 
 		logger.info("Customer name (English) : " + name);
-        logger.info("*** welcome(): {}", name);
-        return "index";
-    }
-	
+		logger.info("*** welcome(): {}", name);
+		return "index";
+	}
+
 	/**
 	 * Return no favicon.
 	 */
-	@GetMapping(path={"favicon.ico", "favicon-16x16.jpg"})
+	@GetMapping(path = { "favicon.ico", "favicon-16x16.jpg" })
 	@ResponseBody
-	void returnNoFavicon() {}
+	void returnNoFavicon() {
+	}
 }

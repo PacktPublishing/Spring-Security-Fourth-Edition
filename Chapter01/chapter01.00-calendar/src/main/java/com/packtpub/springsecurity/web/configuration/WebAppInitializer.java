@@ -15,8 +15,8 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
  * @see
  */
 public class WebAppInitializer
-        extends AbstractAnnotationConfigDispatcherServletInitializer
-        implements WebApplicationInitializer {
+		extends AbstractAnnotationConfigDispatcherServletInitializer
+		implements WebApplicationInitializer {
 
 	/**
 	 * Get root config classes class [ ].
@@ -24,9 +24,9 @@ public class WebAppInitializer
 	 * @return the class [ ]
 	 */
 	@Override
-    protected Class<?>[] getRootConfigClasses() {
-        return new Class[] { JavaConfig.class };
-    }
+	protected Class<?>[] getRootConfigClasses() {
+		return new Class[] { JavaConfig.class };
+	}
 
 	/**
 	 * Get servlet config classes class [ ].
@@ -34,9 +34,9 @@ public class WebAppInitializer
 	 * @return the class [ ]
 	 */
 	@Override
-    protected Class<?>[] getServletConfigClasses() {
-        return new Class[] { WebMvcConfig.class };
-    }
+	protected Class<?>[] getServletConfigClasses() {
+		return new Class[] { WebMvcConfig.class };
+	}
 
 	/**
 	 * Get servlet mappings string [ ].
@@ -44,9 +44,9 @@ public class WebAppInitializer
 	 * @return the string [ ]
 	 */
 	@Override
-    protected String[] getServletMappings() {
-        return new String[] { "/" }; // or *.html
-    }
+	protected String[] getServletMappings() {
+		return new String[] { "/" }; // or *.html
+	}
 
 	/**
 	 * On startup.
@@ -55,18 +55,18 @@ public class WebAppInitializer
 	 * @throws ServletException the servlet exception
 	 */
 	@Override
-    public void onStartup(final ServletContext servletContext)
-            throws ServletException {
+	public void onStartup(final ServletContext servletContext)
+			throws ServletException {
 
-        // Register DispatcherServlet
-        super.onStartup(servletContext);
+		// Register DispatcherServlet
+		super.onStartup(servletContext);
 
-        // Register H2 Admin console:
-        ServletRegistration.Dynamic h2WebServlet = servletContext.addServlet("h2WebServlet",
-                new org.h2.server.web.JakartaWebServlet());
-        h2WebServlet.addMapping("/admin/h2/*");
-        h2WebServlet.setInitParameter("webAllowOthers", "true");
+		// Register H2 Admin console:
+		ServletRegistration.Dynamic h2WebServlet = servletContext.addServlet("h2WebServlet",
+				new org.h2.server.web.JakartaWebServlet());
+		h2WebServlet.addMapping("/admin/h2/*");
+		h2WebServlet.setInitParameter("webAllowOthers", "true");
 
-    }
+	}
 
 } // The End...

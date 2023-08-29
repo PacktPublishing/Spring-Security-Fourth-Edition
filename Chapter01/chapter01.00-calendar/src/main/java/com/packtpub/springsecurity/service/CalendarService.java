@@ -13,9 +13,9 @@ import org.springframework.dao.EmptyResultDataAccessException;
 public interface CalendarService {
 
 	/**
-	 * Gets a {@link CalendarUser} for a specific {@link CalendarUser#getId()}.
+	 * Gets a {@link CalendarUser} for a specific {@link CalendarUser#id()}.
 	 *
-	 * @param id the {@link CalendarUser#getId()} of the {@link CalendarUser} to find.
+	 * @param id the {@link CalendarUser#id()} of the {@link CalendarUser} to find.
 	 * @return a {@link CalendarUser} for the given id. Cannot be null.
 	 * @throws EmptyResultDataAccessException if the {@link CalendarUser} cannot be found
 	 */
@@ -42,16 +42,16 @@ public interface CalendarService {
 	/**
 	 * Creates a new {@link CalendarUser}.
 	 *
-	 * @param user the new {@link CalendarUser} to create. The {@link CalendarUser#getId()} must be null.
-	 * @return the new {@link CalendarUser#getId()}.
-	 * @throws IllegalArgumentException if {@link CalendarUser#getId()} is non-null.
+	 * @param user the new {@link CalendarUser} to create. The {@link CalendarUser#id()} must be null.
+	 * @return the new {@link CalendarUser#id()}.
+	 * @throws IllegalArgumentException if {@link CalendarUser#id()} is non-null.
 	 */
 	int createUser(CalendarUser user);
 
 	/**
 	 * Given an id gets an {@link Event}.
 	 *
-	 * @param eventId the {@link Event#getId()}
+	 * @param eventId the {@link Event#id()}
 	 * @return the {@link Event}. Cannot be null.
 	 * @throws RuntimeException if the {@link Event} cannot be found.
 	 */
@@ -62,14 +62,14 @@ public interface CalendarService {
 	 *
 	 * @param event the event
 	 * @return the new id for the {@link Event}
-	 * @throws RuntimeException if {@link Event#getId()} is non-null.
+	 * @throws RuntimeException if {@link Event#id()} is non-null.
 	 */
 	int createEvent(Event event);
 
 	/**
 	 * Finds the {@link Event}'s that are intended for the {@link CalendarUser}.
 	 *
-	 * @param userId the {@link CalendarUser#getId()} to obtain {@link Event}'s for.
+	 * @param userId the {@link CalendarUser#id()} to obtain {@link Event}'s for.
 	 * @return a non-null {@link List} of {@link Event}'s intended for the specified {@link CalendarUser}. If the         {@link CalendarUser} does not exist an empty List will be returned.
 	 */
 	List<Event> findForUser(int userId);

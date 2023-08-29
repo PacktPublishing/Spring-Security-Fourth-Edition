@@ -22,27 +22,27 @@ public class CreateEventForm {
 	 * The Attendee email.
 	 */
 	@NotEmpty(message = "Attendee Email is required")
-    @Email(message = "Attendee Email must be a valid email")
-    private String attendeeEmail;
+	@Email(message = "Attendee Email must be a valid email")
+	private String attendeeEmail;
 
 	/**
 	 * The Summary.
 	 */
 	@NotEmpty(message = "Summary is required")
-    private String summary;
+	private String summary;
 
 	/**
 	 * The Description.
 	 */
 	@NotEmpty(message = "Description is required")
-    private String description;
+	private String description;
 
 	/**
 	 * The When.
 	 */
 	@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm")
-    @NotNull(message = "Event Date/Time is required")
-    private Calendar when;
+	@NotNull(message = "Event Date/Time is required")
+	private Calendar when;
 
 	/**
 	 * Gets attendee email.
@@ -50,8 +50,8 @@ public class CreateEventForm {
 	 * @return the attendee email
 	 */
 	public String getAttendeeEmail() {
-        return attendeeEmail;
-    }
+		return attendeeEmail;
+	}
 
 	/**
 	 * Sets attendee email.
@@ -59,8 +59,8 @@ public class CreateEventForm {
 	 * @param attendeeEmail the attendee email
 	 */
 	public void setAttendeeEmail(String attendeeEmail) {
-        this.attendeeEmail = attendeeEmail;
-    }
+		this.attendeeEmail = attendeeEmail;
+	}
 
 	/**
 	 * Gets summary.
@@ -68,8 +68,8 @@ public class CreateEventForm {
 	 * @return the summary
 	 */
 	public String getSummary() {
-        return summary;
-    }
+		return summary;
+	}
 
 	/**
 	 * Sets summary.
@@ -77,8 +77,8 @@ public class CreateEventForm {
 	 * @param summary the summary
 	 */
 	public void setSummary(String summary) {
-        this.summary = summary;
-    }
+		this.summary = summary;
+	}
 
 	/**
 	 * Gets description.
@@ -86,8 +86,8 @@ public class CreateEventForm {
 	 * @return the description
 	 */
 	public String getDescription() {
-        return description;
-    }
+		return description;
+	}
 
 	/**
 	 * Sets description.
@@ -95,8 +95,8 @@ public class CreateEventForm {
 	 * @param description the description
 	 */
 	public void setDescription(String description) {
-        this.description = description;
-    }
+		this.description = description;
+	}
 
 	/**
 	 * Gets when.
@@ -104,8 +104,8 @@ public class CreateEventForm {
 	 * @return the when
 	 */
 	public Calendar getWhen() {
-        return when;
-    }
+		return when;
+	}
 
 	/**
 	 * Sets when.
@@ -113,6 +113,6 @@ public class CreateEventForm {
 	 * @param when the when
 	 */
 	public void setWhen(Calendar when) {
-        this.when = when;
-    }
+		this.when = when;
+	}
 }

@@ -57,17 +57,17 @@ public class DataSourceConfig {
 	 * @return data source
 	 */
 	@Bean
-    public DataSource dataSource() {
-        final EmbeddedDatabaseBuilder builder = new EmbeddedDatabaseBuilder();
-        database = builder.setType(EmbeddedDatabaseType.H2)
-                .setName("dataSource")
-                .ignoreFailedDrops(true)
-                .continueOnError(false)
-                .addScript("classpath:database/h2/calendar-schema.sql")
-                .addScript("classpath:database/h2/calendar-data.sql")
-                .build();
-        return database;
-    }
+	public DataSource dataSource() {
+		final EmbeddedDatabaseBuilder builder = new EmbeddedDatabaseBuilder();
+		database = builder.setType(EmbeddedDatabaseType.H2)
+				.setName("dataSource")
+				.ignoreFailedDrops(true)
+				.continueOnError(false)
+				.addScript("classpath:database/h2/calendar-schema.sql")
+				.addScript("classpath:database/h2/calendar-data.sql")
+				.build();
+		return database;
+	}
 
 	/**
 	 * Transaction manager platform transaction manager.
@@ -76,9 +76,9 @@ public class DataSourceConfig {
 	 * @return the platform transaction manager
 	 */
 	@Bean
-    public PlatformTransactionManager transactionManager(final DataSource dataSource) {
-        return new DataSourceTransactionManager(dataSource);
-    }
+	public PlatformTransactionManager transactionManager(final DataSource dataSource) {
+		return new DataSourceTransactionManager(dataSource);
+	}
 
 	/**
 	 * Jdbc operations jdbc template.
@@ -87,9 +87,9 @@ public class DataSourceConfig {
 	 * @return the jdbc template
 	 */
 	@Bean
-    public JdbcTemplate jdbcOperations(final DataSource dataSource){
-        return new JdbcTemplate(dataSource);
-    }
+	public JdbcTemplate jdbcOperations(final DataSource dataSource) {
+		return new JdbcTemplate(dataSource);
+	}
 
 
 	/**
@@ -98,9 +98,9 @@ public class DataSourceConfig {
 	 * @return the local validator factory bean
 	 */
 	@Bean
-    public LocalValidatorFactoryBean validatorFactoryBean() {
-        return new LocalValidatorFactoryBean();
-    }
+	public LocalValidatorFactoryBean validatorFactoryBean() {
+		return new LocalValidatorFactoryBean();
+	}
 
 
 	/**
@@ -109,9 +109,9 @@ public class DataSourceConfig {
 	 * @return the method validation post processor
 	 */
 	@Bean
-    public MethodValidationPostProcessor methodValidationPostProcessor() {
-        return new MethodValidationPostProcessor();
-    }
+	public MethodValidationPostProcessor methodValidationPostProcessor() {
+		return new MethodValidationPostProcessor();
+	}
 
 
 	/**
@@ -120,26 +120,27 @@ public class DataSourceConfig {
 	 * @throws SQLException the sql exception
 	 */
 	@PreDestroy()
-    public void dataSourceDestroy() throws SQLException {
+	public void dataSourceDestroy() throws SQLException {
 
-        SQLException sqlException = null;
+		SQLException sqlException = null;
 
-        try {
+		try {
 			applicationContext.getBean(DataSource.class)
-                    .getConnection()
-                    .close();
-        } catch (SQLException e){
-            sqlException = e;
-            e.printStackTrace();
-        }
+					.getConnection()
+					.close();
+		}
+		catch (SQLException e) {
+			sqlException = e;
+			e.printStackTrace();
+		}
 
-        if (database != null) {
-            database.shutdown();
-        }
+		if (database != null) {
+			database.shutdown();
+		}
 
-        if(sqlException != null){
-            throw sqlException;
-        }
-    }
+		if (sqlException != null) {
+			throw sqlException;
+		}
+	}
 
 } // The End...

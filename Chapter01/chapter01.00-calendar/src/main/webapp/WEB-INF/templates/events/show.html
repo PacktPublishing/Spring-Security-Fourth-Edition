@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
     <title id="pageTitle" th:text="'Event - ' + ${event.summary}"></title>
 
     <!--/*/ <th:block th:insert="~{fragments/headerinc :: head}"></th:block> /*/-->
@@ -23,7 +23,9 @@
         <dd class="col-sm-9" id="attendee" th:text="${event.attendee.name}"></dd>
 
         <dt class="col-sm-3">When</dt>
-        <dd class="col-sm-9" id="description" th:text="${#calendars.format(event.dateWhen, 'yyyy-MM-dd HH:mm')}">today</dd>
+        <dd class="col-sm-9" id="description"
+            th:text="${#calendars.format(event.dateWhen, 'yyyy-MM-dd HH:mm')}">today
+        </dd>
 
         <dt class="col-sm-3">Message Details</dt>
         <dd class="col-sm-9" id="description" th:text="${event.description}"></dd>

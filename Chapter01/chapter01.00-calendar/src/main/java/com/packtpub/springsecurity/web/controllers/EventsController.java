@@ -43,10 +43,10 @@ public class EventsController {
 	 * @param calendarService the calendar service
 	 * @param userContext     the user context
 	 */
-    public EventsController(CalendarService calendarService, UserContext userContext) {
-        this.calendarService = calendarService;
-        this.userContext = userContext;
-    }
+	public EventsController(CalendarService calendarService, UserContext userContext) {
+		this.calendarService = calendarService;
+		this.userContext = userContext;
+	}
 
 	/**
 	 * Events model and view.
@@ -54,9 +54,9 @@ public class EventsController {
 	 * @return the model and view
 	 */
 	@GetMapping("/")
-    public ModelAndView events() {
-        return new ModelAndView("events/list", "events", calendarService.getEvents());
-    }
+	public ModelAndView events() {
+		return new ModelAndView("events/list", "events", calendarService.getEvents());
+	}
 
 	/**
 	 * My events model and view.
@@ -64,13 +64,13 @@ public class EventsController {
 	 * @return the model and view
 	 */
 	@GetMapping("/my")
-    public ModelAndView myEvents() {
-        CalendarUser currentUser = userContext.getCurrentUser();
-        Integer currentUserId = currentUser.getId();
-        ModelAndView result = new ModelAndView("events/my", "events", calendarService.findForUser(currentUserId));
-        result.addObject("currentUser", currentUser);
-        return result;
-    }
+	public ModelAndView myEvents() {
+		CalendarUser currentUser = userContext.getCurrentUser();
+		Integer currentUserId = currentUser.id();
+		ModelAndView result = new ModelAndView("events/my", "events", calendarService.findForUser(currentUserId));
+		result.addObject("currentUser", currentUser);
+		return result;
+	}
 
 	/**
 	 * Show model and view.
@@ -79,10 +79,10 @@ public class EventsController {
 	 * @return the model and view
 	 */
 	@GetMapping("/{eventId}")
-    public ModelAndView show(@PathVariable int eventId) {
-        Event event = calendarService.getEvent(eventId);
-        return new ModelAndView("events/show", "event", event);
-    }
+	public ModelAndView show(@PathVariable int eventId) {
+		Event event = calendarService.getEvent(eventId);
+		return new ModelAndView("events/show", "event", event);
+	}
 
 	/**
 	 * Create event form string.
@@ -91,9 +91,9 @@ public class EventsController {
 	 * @return the string
 	 */
 	@GetMapping("/form")
-    public String createEventForm(@ModelAttribute CreateEventForm createEventForm) {
-        return "events/create";
-    }
+	public String createEventForm(@ModelAttribute CreateEventForm createEventForm) {
+		return "events/create";
+	}
 
 	/**
 	 * Populates the form for creating an event with valid information. Useful so that users do not have to think when
@@ -103,20 +103,20 @@ public class EventsController {
 	 * @return string string
 	 */
 	@PostMapping(value = "/new", params = "auto")
-    public String createEventFormAutoPopulate(@ModelAttribute CreateEventForm createEventForm) {
-        // provide default values to make user submission easier
-        createEventForm.setSummary("A new event....");
-        createEventForm.setDescription("This was autopopulated to save time creating a valid event.");
-        createEventForm.setWhen(Calendar.getInstance());
+	public String createEventFormAutoPopulate(@ModelAttribute CreateEventForm createEventForm) {
+		// provide default values to make user submission easier
+		createEventForm.setSummary("A new event....");
+		createEventForm.setDescription("This was autopopulated to save time creating a valid event.");
+		createEventForm.setWhen(Calendar.getInstance());
 
-        // make the attendee not the current user
-        CalendarUser currentUser = userContext.getCurrentUser();
-        int attendeeId = currentUser.getId() == 0 ? 1 : 0;
-        CalendarUser attendee = calendarService.getUser(attendeeId);
-        createEventForm.setAttendeeEmail(attendee.getEmail());
+		// make the attendee not the current user
+		CalendarUser currentUser = userContext.getCurrentUser();
+		int attendeeId = currentUser.id() == 0 ? 1 : 0;
+		CalendarUser attendee = calendarService.getUser(attendeeId);
+		createEventForm.setAttendeeEmail(attendee.email());
 
-        return "events/create";
-    }
+		return "events/create";
+	}
 
 	/**
 	 * Create event string.
@@ -127,29 +127,23 @@ public class EventsController {
 	 * @return the string
 	 */
 	@PostMapping(value = "/new")
-    public String createEvent(@Valid CreateEventForm createEventForm, BindingResult result,
-            RedirectAttributes redirectAttributes) {
-        if (result.hasErrors()) {
-            return "events/create";
-        }
-        CalendarUser attendee = calendarService.findUserByEmail(createEventForm.getAttendeeEmail());
-        if (attendee == null) {
-            result.rejectValue("attendeeEmail", "attendeeEmail.missing",
-                    "Could not find a user for the provided Attendee Email");
-        }
-        if (result.hasErrors()) {
-            return "events/create";
-        }
-        Event event = new Event();
-        event.setAttendee(attendee);
-        event.setDescription(createEventForm.getDescription());
-        event.setOwner(userContext.getCurrentUser());
-        event.setSummary(createEventForm.getSummary());
-        event.setDateWhen(createEventForm.getWhen());
-        calendarService.createEvent(event);
+	public String createEvent(@Valid CreateEventForm createEventForm, BindingResult result,
+			RedirectAttributes redirectAttributes) {
+		if (result.hasErrors()) {
+			return "events/create";
+		}
+		CalendarUser attendee = calendarService.findUserByEmail(createEventForm.getAttendeeEmail());
+		if (attendee == null) {
+			result.rejectValue("attendeeEmail", "attendeeEmail.missing",
+					"Could not find a user for the provided Attendee Email");
+		}
+		if (result.hasErrors()) {
+			return "events/create";
+		}
+		Event event = new Event(null, createEventForm.getSummary(), createEventForm.getDescription(), createEventForm.getWhen(), userContext.getCurrentUser(), attendee);
+		calendarService.createEvent(event);
+		redirectAttributes.addFlashAttribute("message", "Successfully added the new event");
 
-        redirectAttributes.addFlashAttribute("message", "Successfully added the new event");
-
-        return "redirect:/events/my";
-    }
+		return "redirect:/events/my";
+	}
 }

@@ -11,9 +11,9 @@
 		</encoder>
 	</appender>
 
-    <!-- Use level="DEBUG" for more detailed logging -->
+	<!-- Use level="DEBUG" for more detailed logging -->
 	<root level="INFO">
-		<appender-ref ref="STDOUT" />
+		<appender-ref ref="STDOUT"/>
 	</root>
 
 </configuration>

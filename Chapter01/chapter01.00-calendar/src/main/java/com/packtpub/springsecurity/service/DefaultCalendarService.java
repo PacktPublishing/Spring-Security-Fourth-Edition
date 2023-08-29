@@ -34,16 +34,16 @@ public class DefaultCalendarService implements CalendarService {
 	 * @param eventDao the event dao
 	 * @param userDao  the user dao
 	 */
-    public DefaultCalendarService(EventDao eventDao, CalendarUserDao userDao) {
-        if (eventDao == null) {
-            throw new IllegalArgumentException("eventDao cannot be null");
-        }
-        if (userDao == null) {
-            throw new IllegalArgumentException("userDao cannot be null");
-        }
-        this.eventDao = eventDao;
-        this.userDao = userDao;
-    }
+	public DefaultCalendarService(EventDao eventDao, CalendarUserDao userDao) {
+		if (eventDao == null) {
+			throw new IllegalArgumentException("eventDao cannot be null");
+		}
+		if (userDao == null) {
+			throw new IllegalArgumentException("userDao cannot be null");
+		}
+		this.eventDao = eventDao;
+		this.userDao = userDao;
+	}
 
 	/**
 	 * Gets event.
@@ -52,8 +52,8 @@ public class DefaultCalendarService implements CalendarService {
 	 * @return the event
 	 */
 	public Event getEvent(int eventId) {
-        return eventDao.getEvent(eventId);
-    }
+		return eventDao.getEvent(eventId);
+	}
 
 	/**
 	 * Create event int.
@@ -62,8 +62,8 @@ public class DefaultCalendarService implements CalendarService {
 	 * @return the int
 	 */
 	public int createEvent(Event event) {
-        return eventDao.createEvent(event);
-    }
+		return eventDao.createEvent(event);
+	}
 
 	/**
 	 * Find for user list.
@@ -72,8 +72,8 @@ public class DefaultCalendarService implements CalendarService {
 	 * @return the list
 	 */
 	public List<Event> findForUser(int userId) {
-        return eventDao.findForUser(userId);
-    }
+		return eventDao.findForUser(userId);
+	}
 
 	/**
 	 * Gets events.
@@ -81,8 +81,8 @@ public class DefaultCalendarService implements CalendarService {
 	 * @return the events
 	 */
 	public List<Event> getEvents() {
-        return eventDao.getEvents();
-    }
+		return eventDao.getEvents();
+	}
 
 	/**
 	 * Gets user.
@@ -91,8 +91,8 @@ public class DefaultCalendarService implements CalendarService {
 	 * @return the user
 	 */
 	public CalendarUser getUser(int id) {
-        return userDao.getUser(id);
-    }
+		return userDao.getUser(id);
+	}
 
 	/**
 	 * Find user by email calendar user.
@@ -101,8 +101,8 @@ public class DefaultCalendarService implements CalendarService {
 	 * @return the calendar user
 	 */
 	public CalendarUser findUserByEmail(String email) {
-        return userDao.findUserByEmail(email);
-    }
+		return userDao.findUserByEmail(email);
+	}
 
 	/**
 	 * Find users by email list.
@@ -111,8 +111,8 @@ public class DefaultCalendarService implements CalendarService {
 	 * @return the list
 	 */
 	public List<CalendarUser> findUsersByEmail(String partialEmail) {
-        return userDao.findUsersByEmail(partialEmail);
-    }
+		return userDao.findUsersByEmail(partialEmail);
+	}
 
 	/**
 	 * Create user int.
@@ -121,6 +121,6 @@ public class DefaultCalendarService implements CalendarService {
 	 * @return the int
 	 */
 	public int createUser(CalendarUser user) {
-        return userDao.createUser(user);
-    }
+		return userDao.createUser(user);
+	}
 }

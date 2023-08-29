@@ -15,9 +15,9 @@ import org.springframework.dao.EmptyResultDataAccessException;
 public interface CalendarUserDao {
 
 	/**
-	 * Gets a {@link CalendarUser} for a specific {@link CalendarUser#getId()}.
+	 * Gets a {@link CalendarUser} for a specific {@link CalendarUser#id()}.
 	 *
-	 * @param id the {@link CalendarUser#getId()} of the {@link CalendarUser} to find.
+	 * @param id the {@link CalendarUser#id()} of the {@link CalendarUser} to find.
 	 * @return a {@link CalendarUser} for the given id. Cannot be null.
 	 * @throws EmptyResultDataAccessException if the {@link CalendarUser} cannot be found
 	 */
@@ -45,9 +45,9 @@ public interface CalendarUserDao {
 	/**
 	 * Creates a new {@link CalendarUser}.
 	 *
-	 * @param user the new {@link CalendarUser} to create. The {@link CalendarUser#getId()} must be null.
-	 * @return the new {@link CalendarUser#getId()}.
-	 * @throws IllegalArgumentException if {@link CalendarUser#getId()} is non-null.
+	 * @param user the new {@link CalendarUser} to create. The {@link CalendarUser#id()} must be null.
+	 * @return the new {@link CalendarUser#id()}.
+	 * @throws IllegalArgumentException if {@link CalendarUser#id()} is non-null.
 	 */
 	int createUser(CalendarUser user);
 }

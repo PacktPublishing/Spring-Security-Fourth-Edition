@@ -20,7 +20,7 @@ public class UserContextStub implements UserContext {
 	private final CalendarUserDao userService;
 
 	/**
-	 * The {@link CalendarUser#getId()} for the user that is representing the currently logged in user. This can be
+	 * The {@link CalendarUser#id()} for the user that is representing the currently logged in user. This can be
 	 * modified using {@link #setCurrentUser(CalendarUser)}
 	 */
 	private int currentUserId = 0;
@@ -30,12 +30,12 @@ public class UserContextStub implements UserContext {
 	 *
 	 * @param userService the user service
 	 */
-    public UserContextStub(CalendarUserDao userService) {
-        if (userService == null) {
-            throw new IllegalArgumentException("userService cannot be null");
-        }
-        this.userService = userService;
-    }
+	public UserContextStub(CalendarUserDao userService) {
+		if (userService == null) {
+			throw new IllegalArgumentException("userService cannot be null");
+		}
+		this.userService = userService;
+	}
 
 	/**
 	 * Gets current user.
@@ -43,9 +43,9 @@ public class UserContextStub implements UserContext {
 	 * @return the current user
 	 */
 	@Override
-    public CalendarUser getCurrentUser() {
-        return userService.getUser(currentUserId);
-    }
+	public CalendarUser getCurrentUser() {
+		return userService.getUser(currentUserId);
+	}
 
 	/**
 	 * Sets current user.
@@ -53,14 +53,14 @@ public class UserContextStub implements UserContext {
 	 * @param user the user
 	 */
 	@Override
-    public void setCurrentUser(CalendarUser user) {
-        if (user == null) {
-            throw new IllegalArgumentException("user cannot be null");
-        }
-        Integer currentId = user.getId();
-        if(currentId == null) {
-            throw new IllegalArgumentException("user.getId() cannot be null");
-        }
-        this.currentUserId = currentId;
-    }
+	public void setCurrentUser(CalendarUser user) {
+		if (user == null) {
+			throw new IllegalArgumentException("user cannot be null");
+		}
+		Integer currentId = user.id();
+		if (currentId == null) {
+			throw new IllegalArgumentException("user.id() cannot be null");
+		}
+		this.currentUserId = currentId;
+	}
 }
