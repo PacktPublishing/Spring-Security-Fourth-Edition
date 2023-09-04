@@ -2,3 +2,13 @@ rootProject.name = 'Spring-Security-Fourth-Edition'
 
 // Chapter 1:  Anatomy of an Unsafe Application
 include 'Chapter01:chapter01.00-calendar'
+
+//---------------------------------------------------------------------------//
+// Chapter 2: Getting Started with Spring Security
+include 'Chapter02:chapter02.00-calendar'
+include 'Chapter02:chapter02.01-calendar'
+include 'Chapter02:chapter02.02-calendar'
+include 'Chapter02:chapter02.03-calendar'
+include 'Chapter02:chapter02.04-calendar'
+include 'Chapter02:chapter02.05-calendar'
+include 'Chapter02:chapter02.06-calendar'

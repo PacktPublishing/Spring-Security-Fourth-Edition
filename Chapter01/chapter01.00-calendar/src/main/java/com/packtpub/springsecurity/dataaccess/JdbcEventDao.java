@@ -19,7 +19,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * A jdbc implementation of {@link EventDao}.
+ * A jdbc implementation of {@link com.packtpub.springsecurity.dataaccess.EventDao}.
  *
  * @author Rob Winch
  * @author bassLahsen
@@ -133,8 +133,8 @@ public class JdbcEventDao implements EventDao {
 				ps.setDate(1, new java.sql.Date(when.getTimeInMillis()));
 				ps.setString(2, event.summary());
 				ps.setString(3, event.description());
-				ps.setInt(4, owner.id());
-				ps.setObject(5, attendee == null ? null : attendee.id());
+				ps.setInt(4, owner.getId());
+				ps.setObject(5, attendee == null ? null : attendee.getId());
 				return ps;
 			}
 		}, keyHolder);

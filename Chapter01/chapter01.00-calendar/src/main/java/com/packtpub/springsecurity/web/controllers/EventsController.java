@@ -66,7 +66,7 @@ public class EventsController {
 	@GetMapping("/my")
 	public ModelAndView myEvents() {
 		CalendarUser currentUser = userContext.getCurrentUser();
-		Integer currentUserId = currentUser.id();
+		Integer currentUserId = currentUser.getId();
 		ModelAndView result = new ModelAndView("events/my", "events", calendarService.findForUser(currentUserId));
 		result.addObject("currentUser", currentUser);
 		return result;
@@ -111,9 +111,9 @@ public class EventsController {
 
 		// make the attendee not the current user
 		CalendarUser currentUser = userContext.getCurrentUser();
-		int attendeeId = currentUser.id() == 0 ? 1 : 0;
+		int attendeeId = currentUser.getId() == 0 ? 1 : 0;
 		CalendarUser attendee = calendarService.getUser(attendeeId);
-		createEventForm.setAttendeeEmail(attendee.email());
+		createEventForm.setAttendeeEmail(attendee.getEmail());
 
 		return "events/create";
 	}
