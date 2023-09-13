@@ -34,7 +34,7 @@ public interface EventDao {
 	/**
 	 * Finds the {@link Event}'s that are intended for the {@link CalendarUser}.
 	 *
-	 * @param userId the {@link CalendarUser#id()} to obtain {@link Event}'s for.
+	 * @param userId the {@link CalendarUser#getId()} to obtain {@link Event}'s for.
 	 * @return a non-null {@link List} of {@link Event}'s intended for the specified {@link CalendarUser}. If the         {@link CalendarUser} does not exist an empty List will be returned.
 	 */
 	List<Event> findForUser(int userId);

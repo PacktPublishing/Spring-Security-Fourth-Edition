@@ -20,7 +20,7 @@ public class UserContextStub implements UserContext {
 	private final CalendarUserDao userService;
 
 	/**
-	 * The {@link CalendarUser#id()} for the user that is representing the currently logged in user. This can be
+	 * The {@link CalendarUser#getId()} for the user that is representing the currently logged in user. This can be
 	 * modified using {@link #setCurrentUser(CalendarUser)}
 	 */
 	private int currentUserId = 0;

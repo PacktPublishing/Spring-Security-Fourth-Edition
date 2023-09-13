@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div class="container">
+
+    <div th:fragment="header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" th:href="@{/}">myCalendar</a>
+                <button aria-controls="navbar" aria-expanded="false"
+                        aria-label="Toggle navigation"
+                        class="navbar-toggler" data-bs-target="#navbar"
+                        data-bs-toggle="collapse" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item active"><a class="nav-link"
+                                                       id="navWelcomeLink" th:href="@{/}">Welcome</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" id="navEventsLink"
+                                                th:href="@{/events/}">All Events</a></li>
+                        <li class="nav-item"><a class="nav-link" id="navMyEventsLink"
+                                                th:href="@{/events/my}">My Events</a></li>
+                        <li class="nav-item"><a class="nav-link" id="navCreateEventLink"
+                                                th:href="@{/events/form}">Create Event</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" id="navH2Link"
+                                                target="_blank"
+                                                th:href="@{/admin/h2}">H2</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav pull-right">
+                        <li><a id="navLogoutLink" th:href="@{/logout}">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="alert alert-success" th:if="${param.message != null}">
+        <span th:text="${message}"></span>
+    </div>
+</div>
+
+
+</body>
+</html>

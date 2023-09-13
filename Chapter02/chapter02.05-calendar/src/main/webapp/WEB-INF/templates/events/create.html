@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <title id="pageTitle">Create Event</title>
+
+    <!--/*/ <th:block th:insert="~{fragments/headerinc :: head}"></th:block> /*/-->
+</head>
+<body>
+
+<div class="container">
+    <!--/*/ <th:block th:insert="~{fragments/header :: header}"></th:block> /*/-->
+
+    <!--/*-->
+    <!--@thymesVar id="createEventForm" type="com.packtpub.springsecurity.web.model.CreateEventForm"-->
+    <!--*/-->
+    <form action="#" class="form-horizontal" method="post"
+          th:action="@{/events/new}" th:object="${createEventForm}">
+        <div class="alert alert-danger" th:if="${#fields.hasErrors('*')}">
+            <ul>
+                <li th:each="error : ${#fields.errors('*')}" th:text="${error}"></li>
+            </ul>
+        </div>
+        <fieldset>
+            <legend>Event Information</legend>
+            <div class="mb-3">
+                <label class="form-label" for="attendeeEmail">Attendee Email</label>
+                <input class="form-control" id="attendeeEmail"
+                       th:field="*{attendeeEmail}"/>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="when">Event Date/Time (yyyy-MM-dd
+                    HH:mm)</label>
+                <input class="form-control" id="when" th:field="*{when}"/>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="summary">Summary</label>
+                <input class="form-control" id="summary" th:field="*{summary}"/>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="description">Description</label>
+                <textarea class="form-control" id="description" rows="5"
+                          th:field="*{description}"></textarea>
+            </div>
+            <div class="mb-3">
+                <input class="btn btn-primary" id="submit" type="submit" value="Create"/>
+                <input class="btn btn-secondary" id="auto" name="auto" type="submit"
+                       value="Auto Populate Form"/>
+            </div>
+        </fieldset>
+    </form>
+
+</div>
+
+<!--/*/ <th:block th:insert="~{fragments/footer :: foot}"></th:block> /*/-->
+
+</body>
+</html>

@@ -14,7 +14,6 @@ import org.springframework.jdbc.datasource.embedded.EmbeddedDatabase;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 import org.springframework.transaction.PlatformTransactionManager;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 import org.springframework.validation.beanvalidation.MethodValidationPostProcessor;
 
@@ -22,7 +21,6 @@ import org.springframework.validation.beanvalidation.MethodValidationPostProcess
  * The type Data source config.
  */
 @Configuration
-@EnableTransactionManagement
 public class DataSourceConfig {
 
 	/**
