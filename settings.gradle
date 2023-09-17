@@ -12,3 +12,12 @@ include 'Chapter02:chapter02.03-calendar'
 include 'Chapter02:chapter02.04-calendar'
 include 'Chapter02:chapter02.05-calendar'
 include 'Chapter02:chapter02.06-calendar'
+
+// Chapter 3: Custom Authentication
+include 'Chapter03:chapter03.00-calendar'
+include 'Chapter03:chapter03.01-calendar'
+include 'Chapter03:chapter03.02-calendar'
+include 'Chapter03:chapter03.03-calendar'
+include 'Chapter03:chapter03.04-calendar'
+include 'Chapter03:chapter03.05-calendar'
+include 'Chapter03:chapter03.06-calendar'

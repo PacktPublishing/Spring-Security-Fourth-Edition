@@ -19,10 +19,10 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * A jdbc implementation of {@link com.packtpub.springsecurity.dataaccess.EventDao}.
+ * A jdbc implementation of {@link EventDao}.
  *
  * @author Rob Winch
- * @author bassLahsen
+ * @author bnasslahsen
  */
 @Repository
 public class JdbcEventDao implements EventDao {

@@ -10,14 +10,13 @@ import com.packtpub.springsecurity.domain.Event;
 import org.springframework.stereotype.Repository;
 
 /**
- * A default implementation of {@link com.packtpub.springsecurity.service.CalendarService} that delegates to {@link EventDao} and {@link CalendarUserDao}.
+ * A default implementation of {@link CalendarService} that delegates to {@link EventDao} and {@link CalendarUserDao}.
  *
  * @author Rob Winch
- * @author bassLahsen
+ * @author bnasslahsen
  */
 @Repository
 public class DefaultCalendarService implements CalendarService {
-
 	/**
 	 * The Event dao.
 	 */

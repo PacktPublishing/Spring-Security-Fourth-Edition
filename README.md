@@ -20,6 +20,8 @@ throughout the book.
 
 2. [Getting Started with Spring Security](Chapter02/README.md)
 
+***
 
+3. [Custom Authentication](Chapter03/README.md)
 
-
+***
