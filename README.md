@@ -25,3 +25,7 @@ throughout the book.
 3. [Custom Authentication](Chapter03/README.md)
 
 ***
+
+4. [JDBC-Based Authentication](Chapter04/README.md)
+
+***

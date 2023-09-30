@@ -21,3 +21,13 @@ include 'Chapter03:chapter03.03-calendar'
 include 'Chapter03:chapter03.04-calendar'
 include 'Chapter03:chapter03.05-calendar'
 include 'Chapter03:chapter03.06-calendar'
+
+//---------------------------------------------------------------------------//
+// Chapter 4: JDBC-based Authentication
+include 'Chapter04:chapter04.00-calendar'
+include 'Chapter04:chapter04.01-calendar'
+include 'Chapter04:chapter04.02-calendar'
+include 'Chapter04:chapter04.03-calendar'
+include 'Chapter04:chapter04.04-calendar'
+include 'Chapter04:chapter04.05-calendar'
+include 'Chapter04:chapter04.06-calendar'
