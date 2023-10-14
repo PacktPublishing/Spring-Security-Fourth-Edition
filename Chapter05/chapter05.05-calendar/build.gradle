@@ -1,0 +1,44 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.1.3'
+	id 'io.spring.dependency-management' version '1.1.3'
+}
+
+group = 'com.packtpub.springsecurity'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '17'
+}
+
+repositories {
+	mavenCentral()
+}
+
+bootRun {
+	jvmArgs = ["-Xbootclasspath/p:<fully-qualified-path-to-jar>"]
+}
+
+dependencies {
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	// Spring Security
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	// MondgoDB
+	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+	implementation 'de.flapdoodle.embed:de.flapdoodle.embed.mongo.spring30x:4.9.2'
+	// Thymeleaf
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
+	// webjars
+	implementation 'org.webjars:webjars-locator:0.47'
+	implementation 'org.webjars:bootstrap:5.3.1'
+	//Tests
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

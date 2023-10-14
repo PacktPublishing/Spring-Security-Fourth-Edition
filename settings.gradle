@@ -31,3 +31,12 @@ include 'Chapter04:chapter04.03-calendar'
 include 'Chapter04:chapter04.04-calendar'
 include 'Chapter04:chapter04.05-calendar'
 include 'Chapter04:chapter04.06-calendar'
+
+//---------------------------------------------------------------------------//
+// Chapter 05: Authentication with Spring-Data
+include 'Chapter05:chapter05.00-calendar'
+include 'Chapter05:chapter05.01-calendar'
+include 'Chapter05:chapter05.02-calendar'
+include 'Chapter05:chapter05.03-calendar'
+include 'Chapter05:chapter05.04-calendar'
+include 'Chapter05:chapter05.05-calendar'

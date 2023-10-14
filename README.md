@@ -29,3 +29,6 @@ throughout the book.
 4. [JDBC-Based Authentication](Chapter04/README.md)
 
 ***
+
+5. [Authentication with Spring-Data](chapter05/README.md)
+
