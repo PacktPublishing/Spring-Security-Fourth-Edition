@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title id="pageTitle">Create Event</title>
+
+    <!--/*/ <th:block th:insert="~{fragments/headerinc :: head}"></th:block> /*/-->
+</head>
+<body>
+
+<div class="container">
+    <!--/*/ <th:block th:insert="~{fragments/header :: header}"></th:block> /*/-->
+
+    <!--/*-->
+    <!--@thymesVar id="signupForm" type="com.packtpub.springsecurity.web.model.SignupForm"-->
+    <!--*/-->
+    <form action="#" class="form-horizontal" method="post" th:action="@{/signup/new}"
+          th:object="${signupForm}">
+        <div class="alert alert-danger" th:if="${#fields.hasErrors('*')}">
+            <p th:each="error : ${#fields.errors('*')}" th:text="${error}"></p>
+        </div>
+        <fieldset>
+            <legend>User Information</legend>
+
+            <div class="mb-3">
+                <label class="form-label" for="firstName">First Name</label>
+                <input class="form-control" id="firstName" th:field="*{firstName}"
+                       type="text"/>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="lastName">Last Name</label>
+                <input class="form-control" id="lastName" th:field="*{lastName}"
+                       type="text"/>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="email">Email (Username)</label>
+                <input class="form-control" id="email" th:field="*{email}" type="email"/>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="password">Password</label>
+                <input class="form-control" id="password" th:field="*{password}"
+                       type="password"/>
+            </div>
+            <div class="mb-3">
+                <input class="btn btn-primary" id="submit" type="submit"
+                       value="Create Account"/>
+            </div>
+        </fieldset>
+    </form>
+</div>
+
+<!--/*/ <th:block th:insert="~{fragments/footer :: foot}"></th:block> /*/-->
+
+</body>
+</html>

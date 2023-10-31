@@ -40,3 +40,17 @@ include 'Chapter05:chapter05.02-calendar'
 include 'Chapter05:chapter05.03-calendar'
 include 'Chapter05:chapter05.04-calendar'
 include 'Chapter05:chapter05.05-calendar'
+
+//---------------------------------------------------------------------------//
+// Chapter 06: LDAP Directory Services
+include 'Chapter06:chapter06.00-calendar'
+include 'Chapter06:chapter06.01-calendar'
+include 'Chapter06:chapter06.01-calendar'
+include 'Chapter06:chapter06.02-calendar'
+include 'Chapter06:chapter06.03-calendar'
+include 'Chapter06:chapter06.04-calendar'
+include 'Chapter06:chapter06.05-calendar'
+include 'Chapter06:chapter06.06-calendar'
+include 'Chapter06:chapter06.07-calendar'
+include 'Chapter06:chapter06.08-calendar'
+include 'Chapter06:chapter06.09-calendar'
