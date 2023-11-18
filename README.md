@@ -10,6 +10,7 @@ chapter milestone.
 [Thymeleaf](https://www.thymeleaf.org/) has been used as the view templating engine
 throughout the book.
 
+
 ### Chapters
 
 ***
@@ -30,5 +31,14 @@ throughout the book.
 
 ***
 
-5. [Authentication with Spring-Data](chapter05/README.md)
+5. [Authentication with Spring-Data](Chapter05/README.md)
+
+***
+
+6. [LDAP Directory Services](Chapter06/README.md)
+
+***
+
+7. [Remember-Me Services](Chapter07/README.md)
+
 
