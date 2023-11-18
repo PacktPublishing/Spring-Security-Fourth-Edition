@@ -11,8 +11,7 @@ import jakarta.validation.constraints.NotNull;
  * (someone who was invited to the event), when the event will occur, a summary, and a description. For simplicity, all
  * fields are required.
  *
- * @author Rob Winch
- * @author bnasslahsen
+ *  @author bnasslahsen
  */
 
 public class Event {

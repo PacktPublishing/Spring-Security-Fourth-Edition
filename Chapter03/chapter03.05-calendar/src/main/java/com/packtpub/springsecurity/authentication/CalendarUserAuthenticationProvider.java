@@ -20,7 +20,7 @@ import org.springframework.stereotype.Component;
  * A Spring Security {@link AuthenticationProvider} that uses our {@link CalendarService} for authentication. Compare
  * this to our  CalendarUserDetailsService which is called by Spring Security's {@link DaoAuthenticationProvider}.
  *
- * @author Rob Winch
+ *  @author bnasslahsen
  */
 @Component
 public class CalendarUserAuthenticationProvider implements AuthenticationProvider {

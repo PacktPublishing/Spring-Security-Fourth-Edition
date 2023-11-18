@@ -13,7 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 /**
  * This is Advice to handle INTERNAL_SERVER_ERROR
  *
- * @author mick knutson
+ *  @author bnasslahsen
  */
 @ControllerAdvice
 public class ErrorController {

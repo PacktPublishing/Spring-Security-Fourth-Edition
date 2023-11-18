@@ -56,7 +56,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * &lt;/http>
  * </pre>
  *
- * @author Rob Winch
+ *  @author bnasslahsen
  */
 @Controller
 public class DefaultController {

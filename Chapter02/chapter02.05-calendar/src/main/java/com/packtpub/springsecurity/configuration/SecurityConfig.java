@@ -65,7 +65,7 @@ public class SecurityConfig {
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		http
-				.authorizeHttpRequests((authz) -> authz
+				.authorizeHttpRequests( authz -> authz
 						.requestMatchers(antMatcher("/resources/**")).permitAll()
 						.requestMatchers(antMatcher("/webjars/**")).permitAll()
 						.requestMatchers(antMatcher("/")).permitAll()

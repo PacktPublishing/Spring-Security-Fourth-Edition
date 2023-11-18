@@ -7,8 +7,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 /**
  * The type Signup form.
  *
- * @author Rob Winch
- * @author Mick Knutson
+ * @author bnasslahsen
  * @since chapter 03.00
  */
 public class SignupForm {

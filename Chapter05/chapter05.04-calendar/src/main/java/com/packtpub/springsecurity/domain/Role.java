@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 
 /**
  *
- * @author Mick Knutson
+ *  @author bnasslahsen
  */
 @Entity
 @Table(name = "role")

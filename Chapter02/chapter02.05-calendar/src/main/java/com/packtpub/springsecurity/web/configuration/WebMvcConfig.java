@@ -30,8 +30,7 @@ import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
  * Note that this class is loaded via the WebAppInitializer
  * </p>
  *
- * @author Rob Winch
- * @author Mick Knutson
+ * @author bnasslahsen
  * @author bassLahsen
  */
 @Configuration

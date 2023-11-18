@@ -67,7 +67,7 @@ public class SecurityConfig {
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		http
-				.authorizeHttpRequests((authz) -> authz
+				.authorizeHttpRequests( authz -> authz
 						.requestMatchers(antMatcher("/")).access(new WebExpressionAuthorizationManager("hasAnyRole('ANONYMOUS', 'USER')"))
 						.requestMatchers(antMatcher("/resources/**")).permitAll()
 						.requestMatchers(antMatcher("/webjars/**")).permitAll()

@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * The type Calendar application.
  *
- * @author bnasslahsen
+ *  @author bnasslahsen
  */
 @SpringBootApplication
 public class CalendarApplication {

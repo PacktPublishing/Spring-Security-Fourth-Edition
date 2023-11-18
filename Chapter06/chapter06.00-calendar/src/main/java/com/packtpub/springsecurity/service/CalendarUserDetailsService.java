@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
  * Integrates with Spring Security using our existing {@link CalendarUserDao} by looking up a {@link CalendarUser} and
  * converting it into a {@link UserDetails} so that Spring Security can do the username/password comparison for us.
  *
- * @author Rob Winch
+ * @author bnasslahsen
  * @ see CalendarUserAuthenticationProvider
  */
 @Component
@@ -55,7 +55,7 @@ public class CalendarUserDetailsService implements UserDetailsService {
      * Authentication</a></li>
      * </ul>
      *
-     * @author Rob Winch
+     * @author bnasslahsen
      *
      */
     private final class CalendarUserDetails extends CalendarUser implements UserDetails {

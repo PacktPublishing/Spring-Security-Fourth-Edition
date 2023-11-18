@@ -8,8 +8,7 @@ import com.packtpub.springsecurity.domain.Event;
 /**
  * An interface for managing {@link Event}'s.
  *
- * @author Rob Winch
- * @author bnasslahsen
+ *  @author bnasslahsen
  */
 public interface EventDao {
 

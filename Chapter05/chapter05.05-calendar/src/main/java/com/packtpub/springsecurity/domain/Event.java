@@ -19,8 +19,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
  * (someone who was invited to the event), when the event will occur, a summary, and a description. For simplicity, all
  * fields are required.
  *
- * @author Rob Winch
- * @author Mick Knutson
+ * @author bnasslahsen
  *
  */
 @Document(collection="events")

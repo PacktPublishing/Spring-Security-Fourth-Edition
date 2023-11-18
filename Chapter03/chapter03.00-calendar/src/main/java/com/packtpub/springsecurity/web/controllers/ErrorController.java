@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 /**
  * The type Error controller.
  *
- * @author bnasslahsen
+ *  @author bnasslahsen
  */
 @ControllerAdvice
 public class ErrorController {

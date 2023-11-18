@@ -21,7 +21,7 @@ import org.springframework.transaction.annotation.Transactional;
 /**
  * A jdbc implementation of {@link com.packtpub.springsecurity.dataaccess.EventDao}.
  *
- * @author Rob Winch
+ * @author bnasslahsen
  * @author bassLahsen
  */
 @Repository

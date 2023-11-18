@@ -21,7 +21,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 /**
  * The type Events controller.
  *
- * @author bnasslahsen
+ *  @author bnasslahsen
  */
 @Controller
 @RequestMapping("/events")

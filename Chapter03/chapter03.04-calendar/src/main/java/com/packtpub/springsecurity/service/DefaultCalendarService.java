@@ -12,9 +12,7 @@ import org.springframework.stereotype.Repository;
 /**
  * A default implementation of {@link CalendarService} that delegates to {@link EventDao} and {@link CalendarUserDao}.
  *
- * @author Rob Winch
- * @author Mick Knutson
- * @author bnassLahsen
+ *  @author bnasslahsen
  */
 @Repository
 public class DefaultCalendarService implements CalendarService {

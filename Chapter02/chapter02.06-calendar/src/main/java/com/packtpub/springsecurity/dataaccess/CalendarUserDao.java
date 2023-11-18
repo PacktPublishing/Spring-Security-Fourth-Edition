@@ -9,7 +9,7 @@ import org.springframework.dao.EmptyResultDataAccessException;
 /**
  * An interface for managing {@link CalendarUser} instances.
  *
- * @author Rob Winch
+ * @author bnasslahsen
  * @author bassLahsen
  */
 public interface CalendarUserDao {

@@ -54,3 +54,15 @@ include 'Chapter06:chapter06.06-calendar'
 include 'Chapter06:chapter06.07-calendar'
 include 'Chapter06:chapter06.08-calendar'
 include 'Chapter06:chapter06.09-calendar'
+
+//---------------------------------------------------------------------------//
+// Chapter 07: Remember-me Services
+include 'Chapter07:chapter07.00-calendar'
+include 'Chapter07:chapter07.01-calendar'
+include 'Chapter07:chapter07.02-calendar'
+include 'Chapter07:chapter07.03-calendar'
+include 'Chapter07:chapter07.04-calendar'
+include 'Chapter07:chapter07.05-calendar'
+include 'Chapter07:chapter07.06-calendar'
+include 'Chapter07:chapter07.07-calendar'
+include 'Chapter07:chapter07.08-calendar'

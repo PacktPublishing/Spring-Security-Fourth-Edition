@@ -58,8 +58,7 @@ import static com.packtpub.springsecurity.web.controllers.ControllerHelper.redir
  * &lt;/http>
  * </pre>
  *
- * @author Rob Winch
- * @author bnasslahsen
+ *  @author bnasslahsen
  */
 @Controller
 public class DefaultController {

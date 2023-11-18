@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 /**
  * This displays the welcome screen that shows what will be happening in this chapter.
  *
- * @author Rob Winch
+ * @author bnasslahsen
  * @author bassLahsen
  */
 @Controller

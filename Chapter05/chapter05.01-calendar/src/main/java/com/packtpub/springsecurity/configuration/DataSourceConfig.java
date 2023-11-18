@@ -9,7 +9,7 @@ import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 
 /**
- * @author Mick Knutson
+ *  @author bnasslahsen
  */
 @Configuration
 public class DataSourceConfig {

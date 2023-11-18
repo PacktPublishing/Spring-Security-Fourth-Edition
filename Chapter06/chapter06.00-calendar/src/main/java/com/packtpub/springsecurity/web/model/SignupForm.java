@@ -5,8 +5,7 @@ import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
 /**
- * @author Rob Winch
- * @author Mick Knutson
+ * @author bnasslahsen
  * @since chapter 03.00
  */
 public class SignupForm {

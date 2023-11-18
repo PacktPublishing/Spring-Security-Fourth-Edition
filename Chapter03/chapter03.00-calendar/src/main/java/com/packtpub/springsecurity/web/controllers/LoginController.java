@@ -12,7 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 /**
  * The type Login controller.
  *
- * @author bnasslahsen
+ *  @author bnasslahsen
  */
 @Controller
 public class LoginController {

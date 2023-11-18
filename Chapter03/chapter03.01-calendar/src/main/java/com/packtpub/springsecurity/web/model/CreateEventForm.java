@@ -13,8 +13,7 @@ import org.springframework.format.annotation.DateTimeFormat;
  * A form object that is used for creating a new {@link Event}. Using a different object is one way of preventing
  * malicious users from filling out field that they should not (i.e. fill out a different owner field).
  *
- * @author Rob Winch
- * @author bnasslahsen
+ *  @author bnasslahsen
  */
 public class CreateEventForm {
 

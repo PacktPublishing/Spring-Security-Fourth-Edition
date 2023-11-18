@@ -21,7 +21,7 @@ import org.springframework.transaction.annotation.Transactional;
 /**
  * A jdbc implementation of {@link CalendarUserDao}.
  *
- * @author Rob Winch
+ *  @author bnasslahsen
  */
 @Repository
 public class JdbcCalendarUserDao implements CalendarUserDao {
@@ -108,7 +108,7 @@ public class JdbcCalendarUserDao implements CalendarUserDao {
 	 * Create a new RowMapper that resolves {@link CalendarUser}'s given a column label prefix. By allowing the prefix
 	 * to be specified we can reuse the same {@link RowMapper} for joins in other tables.
 	 *
-	 * @author Rob Winch
+	 * @author bnasslahsen
 	 */
 	static class CalendarUserRowMapper implements RowMapper<CalendarUser> {
 		private final String columnLabelPrefix;

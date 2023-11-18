@@ -10,7 +10,7 @@ import org.springframework.dao.EmptyResultDataAccessException;
 /**
  * The interface Calendar service.
  *
- * @author bnasslahsen
+ *  @author bnasslahsen
  */
 public interface CalendarService {
 

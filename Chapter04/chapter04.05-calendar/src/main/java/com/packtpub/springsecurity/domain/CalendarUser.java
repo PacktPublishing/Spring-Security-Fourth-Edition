@@ -12,7 +12,7 @@ import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
  * user especially in large applications. This ensures that as you evolve your security requirements (update Spring
  * Security, leverage new Spring Security modules, or even swap out security implementations) you can do so easily.
  *
- * @author Rob Winch
+ *  @author bnasslahsen
  */
 public class CalendarUser implements Principal, Serializable {
 

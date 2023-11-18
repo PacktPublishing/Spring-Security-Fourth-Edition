@@ -12,7 +12,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
  *
- * @author Mick Knutson
+ *  @author bnasslahsen
  */
 @Document(collection="role")
 public class Role  implements Persistable<Integer>, Serializable {

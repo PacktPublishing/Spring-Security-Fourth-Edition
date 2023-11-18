@@ -3,7 +3,7 @@ package com.packtpub.springsecurity.web.controllers;
 import java.util.function.Function;
 
 /**
- * @author Mick Knutson
+ *  @author bnasslahsen
  */
 public class ControllerHelper {
 

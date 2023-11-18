@@ -20,8 +20,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
  * user especially in large applications. This ensures that as you evolve your security requirements (update Spring
  * Security, leverage new Spring Security modules, or even swap out security implementations) you can do so easily.
  *
- * @author Rob Winch
- * @author Mick Knutson
+ * @author bnasslahsen
  *
  */
 @Document(collection="calendar_users")

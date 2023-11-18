@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
  * An implementation of {@link UserContext} that looks up the {@link CalendarUser} using the Spring Security's
  * {@link Authentication} by principal name.
  *
- * @author Rob Winch
+ *  @author bnasslahsen
  */
 @Component
 public class SpringSecurityUserContext implements UserContext {

@@ -11,7 +11,7 @@ import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 /**
  * The type Data source config.
  *
- * @author Mick Knutson
+ *  @author bnasslahsen
  */
 @Configuration
 public class DataSourceConfig {

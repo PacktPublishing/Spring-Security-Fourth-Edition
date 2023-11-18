@@ -5,7 +5,7 @@ import java.util.function.Function;
 /**
  * The type Controller helper.
  *
- * @author Mick Knutson
+ *  @author bnasslahsen
  */
 public class ControllerHelper {
 
