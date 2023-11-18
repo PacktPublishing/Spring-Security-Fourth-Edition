@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <title id="pageTitle" th:text="'Event - ' + ${event.summary}"></title>
+
+    <!--/*/ <th:block th:insert="~{fragments/headerinc :: head}"></th:block> /*/-->
+</head>
+<body>
+
+<div class="container">
+    <!--/*/ <th:block th:insert="~{fragments/header :: header}"></th:block> /*/-->
+
+    <h2 id="summary" th:text="'Event - ' + ${event.summary}">Event - Summary</h2>
+
+    <dl class="row">
+        <dt class="col-sm-3">Owner</dt>
+        <dd class="col-sm-9" id="owner" th:text="${event.owner.name}">Chuck Norris</dd>
+
+        <dt class="col-sm-3">Attendee</dt>
+        <dd class="col-sm-9" id="attendee" th:text="${event.attendee.name}"></dd>
+
+        <dt class="col-sm-3">When</dt>
+        <dd class="col-sm-9" id="description"
+            th:text="${#calendars.format(event.dateWhen, 'yyyy-MM-dd HH:mm')}">today
+        </dd>
+
+        <dt class="col-sm-3">Message Details</dt>
+        <dd class="col-sm-9" id="description" th:text="${event.description}"></dd>
+    </dl>
+
+</div>
+
+<!--/*/ <th:block th:insert="~{fragments/footer :: foot}"></th:block> /*/-->
+
+</body>
+</html>
