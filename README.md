@@ -41,4 +41,8 @@ throughout the book.
 
 7. [Remember-Me Services](Chapter07/README.md)
 
+***
+
+8. [Client Certificate Authentication with TLS](Chapter08/README.md)
+
 
