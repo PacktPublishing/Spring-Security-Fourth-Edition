@@ -45,4 +45,6 @@ throughout the book.
 
 8. [Client Certificate Authentication with TLS](Chapter08/README.md)
 
+***
 
+9. [Opening up to OAuth 2](Chapter09/README.md)

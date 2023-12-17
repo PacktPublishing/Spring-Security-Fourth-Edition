@@ -73,3 +73,15 @@ include 'Chapter08:chapter08.00-calendar'
 include 'Chapter08:chapter08.01-calendar'
 include 'Chapter08:chapter08.02-calendar'
 include 'Chapter08:chapter08.03-calendar'
+
+//---------------------------------------------------------------------------//
+// Chapter 09: Opening up to OAuth2
+include 'Chapter09:chapter09.00-calendar'
+include 'Chapter09:chapter09.01-calendar'
+include 'Chapter09:chapter09.02-calendar'
+include 'Chapter09:chapter09.03-calendar'
+include 'Chapter09:chapter09.04-calendar'
+include 'Chapter09:chapter09.05-calendar'
+include 'Chapter09:chapter09.06-calendar'
+include 'Chapter09:chapter09.07-calendar'
+include 'Chapter09:chapter09.08-calendar'

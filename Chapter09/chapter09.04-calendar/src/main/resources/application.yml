@@ -1,0 +1,76 @@
+#------------------------------------------------------------------------------#
+# Application YAML #
+# inside ./src/main/resources/application.yml
+#------------------------------------------------------------------------------#
+debug: false
+
+spring:
+  ## Thymeleaf configuration:
+  thymeleaf:
+    cache: false
+    mode: HTML
+
+  ## H2 Servlet setting
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+      path: /admin/h2
+
+  datasource:
+    url: jdbc:h2:mem:dataSource;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: false
+    hibernate:
+      ddl-auto: create-drop
+    defer-datasource-initialization: true
+  
+  sql:
+    init:
+      continue-on-error: true
+  
+  ## Chapter 9 OAuth2 Configuration:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 718998563604-fmh5riv9kq17941i8b3094m3h4jie218.apps.googleusercontent.com
+            client-secret: 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
+          github:
+            client-id: 27b810dab6147800a314
+            client-secret: 6ce7c31699a8d3032b1f9e7e706c5ef7888e524c
+          okta:
+            client-id: 0oa8rhpgje66NMTcN5d7
+            client-secret: VuVw7lvw2akApMNhRzp6HoS4IXo_MrLyXOIIZ2Pc
+            scope: openid,profile,email
+        provider:
+          okta:
+            issuer-uri: https://dev-37686908.okta.com
+            authorization-uri: https://dev-37686908.okta.com/oauth2/v1/authorize
+            token-uri: https://dev-37686908.okta.com/oauth2/v1/token
+            user-info-uri: https://dev-37686908.okta.com/oauth2/v1/userinfo
+            user-name-attribute: sub
+            jwk-set-uri: https://dev-37686908.okta.com/oauth2/v1/keys
+
+## Chapter 8 TLS over HTTP/1.1:
+## https://localhost:8443
+server:
+  port: 8443
+  ssl:
+    key-store: "classpath:keys/jbcp_clientauth.p12"
+    key-store-password: changeit
+    keyStoreType: PKCS12
+    keyAlias: jbcpclient
+    protocol: TLS
+
+
+
+
+##---------------------------------------------------------------------------##

@@ -1,0 +1,59 @@
+#------------------------------------------------------------------------------#
+# Application YAML #
+# inside ./src/main/resources/application.yml
+#------------------------------------------------------------------------------#
+debug: false
+
+spring:
+  ## Thymeleaf configuration:
+  thymeleaf:
+    cache: false
+    mode: HTML
+
+  ## H2 Servlet setting
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+      path: /admin/h2
+
+  datasource:
+    url: jdbc:h2:mem:dataSource;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: false
+    hibernate:
+      ddl-auto: create-drop
+    defer-datasource-initialization: true
+  
+  sql:
+    init:
+      continue-on-error: true
+  
+  ## Chapter 9 OAuth2 Configuration:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 718998563604-fmh5riv9kq17941i8b3094m3h4jie218.apps.googleusercontent.com
+            client-secret: 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
+
+## Chapter 8 TLS over HTTP/1.1:
+## https://localhost:8443
+server:
+  port: 8443
+  ssl:
+    key-store: "classpath:keys/jbcp_clientauth.p12"
+    key-store-password: changeit
+    keyStoreType: PKCS12
+    keyAlias: jbcpclient
+    protocol: TLS
+
+
+##---------------------------------------------------------------------------##
