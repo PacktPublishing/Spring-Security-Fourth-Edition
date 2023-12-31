@@ -48,3 +48,7 @@ throughout the book.
 ***
 
 9. [Opening up to OAuth 2](Chapter09/README.md)
+
+***
+
+10. [SAML 2 Support](Chapter10/README.md)

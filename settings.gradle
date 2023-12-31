@@ -85,3 +85,13 @@ include 'Chapter09:chapter09.05-calendar'
 include 'Chapter09:chapter09.06-calendar'
 include 'Chapter09:chapter09.07-calendar'
 include 'Chapter09:chapter09.08-calendar'
+
+//---------------------------------------------------------------------------//
+// Chapter 10: SAML2 Authentication
+include 'Chapter10:chapter10.00-calendar'
+include 'Chapter10:chapter10.01-calendar'
+include 'Chapter10:chapter10.02-calendar'
+include 'Chapter10:chapter10.03-calendar'
+include 'Chapter10:chapter10.04-calendar'
+include 'Chapter10:chapter10.05-calendar'
+include 'Chapter10:chapter10.06-calendar'

@@ -1,0 +1,50 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.2.1'
+	id 'io.spring.dependency-management' version '1.1.4'
+}
+
+group = 'com.packtpub.springsecurity'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '17'
+}
+
+repositories {
+	mavenCentral()
+	maven { url "https://repo.spring.io/milestone" }
+	maven { url "https://build.shibboleth.net/nexus/content/repositories/releases/" }
+}
+
+dependencies {
+	constraints {
+		implementation "org.opensaml:opensaml-core:4.2.0"
+		implementation "org.opensaml:opensaml-saml-api:4.2.0"
+		implementation "org.opensaml:opensaml-saml-impl:4.2.0"
+	}
+	implementation 'org.springframework.security:spring-security-saml2-service-provider'
+	
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	// JPA / ORM / Hibernate:
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
+    // OAuth2 Configuration:
+	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
+	// H2 db
+	implementation 'com.h2database:h2'
+	// webjars
+	implementation 'org.webjars:webjars-locator:0.47'
+	implementation 'org.webjars:bootstrap:5.3.1'
+	//Tests
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.security:spring-security-test'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
