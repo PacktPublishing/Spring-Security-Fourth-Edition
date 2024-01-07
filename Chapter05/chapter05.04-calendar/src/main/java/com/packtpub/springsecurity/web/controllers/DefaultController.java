@@ -5,7 +5,7 @@ import jakarta.servlet.http.HttpServletRequest;
 
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 
 /**
  * <p>
@@ -61,7 +61,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class DefaultController {
 
-	@RequestMapping("/default")
+	@GetMapping("/default")
 	public String defaultAfterLogin(HttpServletRequest request) {
 		if (request.isUserInRole("ROLE_ADMIN")) {
 			return "redirect:/events/";

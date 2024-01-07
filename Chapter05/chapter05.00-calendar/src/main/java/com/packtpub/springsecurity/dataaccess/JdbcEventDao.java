@@ -1,6 +1,5 @@
 package com.packtpub.springsecurity.dataaccess;
 
-import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -12,7 +11,6 @@ import com.packtpub.springsecurity.domain.Event;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcOperations;
-import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
@@ -97,18 +95,16 @@ public class JdbcEventDao implements EventDao {
 			throw new IllegalArgumentException("event.getWhen() cannot be null");
 		}
 		KeyHolder keyHolder = new GeneratedKeyHolder();
-		this.jdbcOperations.update(new PreparedStatementCreator() {
-			public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
-				PreparedStatement ps = connection.prepareStatement(
-						"insert into events (dateWhen,summary,description,owner,attendee) values (?, ?, ?, ?, ?)",
-						new String[] { "id" });
-				ps.setDate(1, new java.sql.Date(when.getTimeInMillis()));
-				ps.setString(2, event.getSummary());
-				ps.setString(3, event.getDescription());
-				ps.setInt(4, owner.getId());
-				ps.setObject(5, attendee == null ? null : attendee.getId());
-				return ps;
-			}
+		this.jdbcOperations.update(connection -> {
+			PreparedStatement ps = connection.prepareStatement(
+					"insert into events (dateWhen,summary,description,owner,attendee) values (?, ?, ?, ?, ?)",
+					new String[] { "id" });
+			ps.setDate(1, new java.sql.Date(when.getTimeInMillis()));
+			ps.setString(2, event.getSummary());
+			ps.setString(3, event.getDescription());
+			ps.setInt(4, owner.getId());
+			ps.setObject(5, attendee == null ? null : attendee.getId());
+			return ps;
 		}, keyHolder);
 		return keyHolder.getKey().intValue();
 	}

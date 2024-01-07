@@ -1,6 +1,5 @@
 package com.packtpub.springsecurity.dataaccess;
 
-import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -11,7 +10,6 @@ import com.packtpub.springsecurity.domain.CalendarUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcOperations;
-import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
@@ -89,17 +87,15 @@ public class JdbcCalendarUserDao implements CalendarUserDao {
 			throw new IllegalArgumentException("userToAdd.getId() must be null when creating a " + CalendarUser.class.getName());
 		}
 		KeyHolder keyHolder = new GeneratedKeyHolder();
-		this.jdbcOperations.update(new PreparedStatementCreator() {
-			public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
-				PreparedStatement ps = connection.prepareStatement(
-						"insert into calendar_users (email, password, first_name, last_name) values (?, ?, ?, ?)",
-						new String[] { "id" });
-				ps.setString(1, userToAdd.getEmail());
-				ps.setString(2, userToAdd.getPassword());
-				ps.setString(3, userToAdd.getFirstName());
-				ps.setString(4, userToAdd.getLastName());
-				return ps;
-			}
+		this.jdbcOperations.update(connection -> {
+			PreparedStatement ps = connection.prepareStatement(
+					"insert into calendar_users (email, password, first_name, last_name) values (?, ?, ?, ?)",
+					new String[] { "id" });
+			ps.setString(1, userToAdd.getEmail());
+			ps.setString(2, userToAdd.getPassword());
+			ps.setString(3, userToAdd.getFirstName());
+			ps.setString(4, userToAdd.getLastName());
+			return ps;
 		}, keyHolder);
 		return keyHolder.getKey().intValue();
 	}
@@ -132,6 +128,4 @@ public class JdbcCalendarUserDao implements CalendarUserDao {
 			return user;
 		}
 	}
-
-	;
 }

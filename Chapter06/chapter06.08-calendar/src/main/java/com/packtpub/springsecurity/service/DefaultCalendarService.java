@@ -68,6 +68,6 @@ public class DefaultCalendarService implements CalendarService {
 
 	public int createUser(CalendarUser user) {
 		int userId = userDao.createUser(user);
-		return userId;
+		return userDao.createUser(user);
 	}
 }

@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class CalendarApplication {
 
 	public static void main(String[] args) {
-		//System.setProperty("javax.net.debug", "ssl:handshake");
 		SpringApplication.run(CalendarApplication.class, args);
 	}
 }

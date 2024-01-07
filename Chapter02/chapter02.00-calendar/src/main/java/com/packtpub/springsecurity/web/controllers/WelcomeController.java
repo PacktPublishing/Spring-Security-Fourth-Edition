@@ -29,6 +29,5 @@ public class WelcomeController {
 	 */
 	@GetMapping(path = { "favicon.ico", "favicon-16x16.jpg" })
 	@ResponseBody
-	void returnNoFavicon() {
-	}
+	void returnNoFavicon() {}
 }

@@ -29,8 +29,8 @@ dependencies {
 	// H2 db
 	implementation 'com.h2database:h2'
 	// webjars
-	implementation 'org.webjars:webjars-locator:0.47'
-	implementation 'org.webjars:bootstrap:5.3.1'
+	implementation 'org.webjars:webjars-locator:0.50'
+	implementation 'org.webjars:bootstrap:5.3.2'
 	//Tests
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'

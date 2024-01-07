@@ -35,11 +35,11 @@ import static org.springframework.security.web.util.matcher.AntPathRequestMatche
 public class SecurityConfig {
 
 	@Value("${spring.ldap.embedded.port}")
-	private int LDAP_PORT;
+	private int ldapPort;
 
 	private BaseLdapPathContextSource getDefaultSpringSecurityContextSource () {
 		DefaultSpringSecurityContextSource defaultSpringSecurityContextSource =	 new DefaultSpringSecurityContextSource(
-				List.of("ldap://localhost:" + LDAP_PORT), "dc=jbcpcalendar,dc=com");
+				List.of("ldap://localhost:" + ldapPort), "dc=jbcpcalendar,dc=com");
 		defaultSpringSecurityContextSource.setUserDn("uid=admin,ou=system");
 		defaultSpringSecurityContextSource.setPassword("secret");
 		defaultSpringSecurityContextSource.afterPropertiesSet();
