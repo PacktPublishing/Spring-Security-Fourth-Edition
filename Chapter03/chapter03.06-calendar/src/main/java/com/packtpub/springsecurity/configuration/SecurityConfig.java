@@ -50,7 +50,7 @@ public class SecurityConfig {
 	 */
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http, AuthenticationManager authManager) throws Exception {
-		http.authorizeRequests( authz -> authz
+		http.authorizeHttpRequests( authz -> authz
 						.requestMatchers(antMatcher("/webjars/**")).permitAll()
 						.requestMatchers(antMatcher("/css/**")).permitAll()
 						.requestMatchers(antMatcher("/favicon.ico")).permitAll()

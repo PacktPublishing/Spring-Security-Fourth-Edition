@@ -52,7 +52,7 @@ public class SecurityConfig {
 	public SecurityFilterChain filterChain(HttpSecurity http,
 			PersistentTokenRepository persistentTokenRepository,
 			X509AuthenticationFilter x509Filter, UserDetailsService userDetailsService) throws Exception {
-		http.authorizeRequests( authz -> authz
+		http.authorizeHttpRequests( authz -> authz
 						.requestMatchers(antMatcher("/webjars/**")).permitAll()
 						.requestMatchers(antMatcher("/css/**")).permitAll()
 						.requestMatchers(antMatcher("/favicon.ico")).permitAll()

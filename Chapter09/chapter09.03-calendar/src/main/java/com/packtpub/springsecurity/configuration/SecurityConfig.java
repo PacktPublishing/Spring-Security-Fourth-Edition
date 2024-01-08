@@ -28,12 +28,12 @@ public class SecurityConfig {
 	 */
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-		http.authorizeRequests( authz -> authz
+		http.authorizeHttpRequests( authz -> authz
 						.requestMatchers(antMatcher("/webjars/**")).permitAll()
 						.requestMatchers(antMatcher("/css/**")).permitAll()
 						.requestMatchers(antMatcher("/favicon.ico")).permitAll()
 						// H2 console:
-						.requestMatchers(antMatcher("/admin/h2/**")).access("isFullyAuthenticated()")
+						.requestMatchers(antMatcher("/admin/h2/**")).fullyAuthenticated()
 						.requestMatchers(antMatcher("/")).permitAll()
 						.requestMatchers(antMatcher("/login/*")).permitAll()
 						.requestMatchers(antMatcher("/logout")).permitAll()
