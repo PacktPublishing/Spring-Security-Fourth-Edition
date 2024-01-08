@@ -35,7 +35,7 @@ public class SecurityConfig {
 						.requestMatchers(antMatcher("/css/**")).permitAll()
 						.requestMatchers(antMatcher("/favicon.ico")).permitAll()
 						// H2 console:
-						.requestMatchers(antMatcher("/admin/h2/**")).access("isFullyAuthenticated()")
+						.requestMatchers(antMatcher("/admin/h2/**")).fullyAuthenticated()
 						.requestMatchers(antMatcher("/")).permitAll()
 						.requestMatchers(antMatcher("/login/*")).permitAll()
 						.requestMatchers(antMatcher("/logout")).permitAll()

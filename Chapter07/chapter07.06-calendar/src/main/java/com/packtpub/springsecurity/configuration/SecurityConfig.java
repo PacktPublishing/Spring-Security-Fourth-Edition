@@ -15,6 +15,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.access.expression.WebExpressionAuthorizationManager;
 import org.springframework.security.web.authentication.RememberMeServices;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenBasedRememberMeServices;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
@@ -53,7 +54,8 @@ public class SecurityConfig {
 						.requestMatchers(antMatcher("/css/**")).permitAll()
 						.requestMatchers(antMatcher("/favicon.ico")).permitAll()
 						// H2 console:
-						.requestMatchers(antMatcher("/admin/h2/**")).access("isFullyAuthenticated() and hasRole('ADMIN')")
+						.requestMatchers(antMatcher("/admin/h2/**"))
+						.access(new WebExpressionAuthorizationManager("isFullyAuthenticated() and hasRole('ADMIN')"))
 						.requestMatchers(antMatcher("/")).permitAll()
 						.requestMatchers(antMatcher("/login/*")).permitAll()
 						.requestMatchers(antMatcher("/logout")).permitAll()
