@@ -11,13 +11,11 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
-import static org.springframework.security.web.util.matcher.AntPathRequestMatcher.antMatcher;
-
 /**
  * Spring Security Config Class
  */
 @Configuration
-@EnableWebSecurity(debug = true)
+@EnableWebSecurity
 public class SecurityConfig {
 
 
@@ -67,14 +65,14 @@ public class SecurityConfig {
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		http
 				.authorizeHttpRequests( authz -> authz
-						.requestMatchers(antMatcher("/resources/**")).permitAll()
-						.requestMatchers(antMatcher("/webjars/**")).permitAll()
-						.requestMatchers(antMatcher("/")).hasAnyRole("ANONYMOUS", "USER")
-						.requestMatchers(antMatcher("/login/*")).hasAnyRole("ANONYMOUS", "USER")
-						.requestMatchers(antMatcher("/logout/*")).hasAnyRole("ANONYMOUS", "USER")
-						.requestMatchers(antMatcher("/admin/*")).hasRole("ADMIN")
-						.requestMatchers(antMatcher("/events/")).hasRole("ADMIN")
-						.requestMatchers(antMatcher("/**")).hasRole("USER")
+						.requestMatchers("/resources/**").permitAll()
+						.requestMatchers("/webjars/**").permitAll()
+						.requestMatchers("/").hasAnyRole("ANONYMOUS", "USER")
+						.requestMatchers("/login/*").hasAnyRole("ANONYMOUS", "USER")
+						.requestMatchers("/logout/*").hasAnyRole("ANONYMOUS", "USER")
+						.requestMatchers("/admin/*").hasRole("ADMIN")
+						.requestMatchers("/events/").hasRole("ADMIN")
+						.requestMatchers("/**").hasRole("USER")
 				)
 				.formLogin(form -> form
 						.loginPage("/login/form")

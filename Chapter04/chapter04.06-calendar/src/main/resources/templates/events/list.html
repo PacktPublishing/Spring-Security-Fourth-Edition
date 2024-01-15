@@ -36,7 +36,7 @@
             <td th:text="${#calendars.format(event.dateWhen, 'yyyy-MM-dd HH:mm')}">today
             </td>
             <td th:text="${event.owner.name}">Chuck Norris</td>
-            <td th:text="${event.attendee.name}">Mick Knutson</td>
+            <td th:text="${event.attendee.name}">Badr NASS</td>
 
             <td><a th:href="@{'/events/{id}'(id=${event.id})}" th:text="${event.summary}">-1</a>
             </td>

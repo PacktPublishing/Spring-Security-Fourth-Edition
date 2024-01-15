@@ -50,7 +50,7 @@ public interface CalendarService {
 	/**
 	 * Creates a {@link Event} and returns the new id for that {@link Event}.
 	 *
-	 * @param message the {@link Event} to create. Note that the {@link Event#getId()} should be null.
+	 * @param event the {@link Event} to create. Note that the {@link Event#getId()} should be null.
 	 * @return the new id for the {@link Event}
 	 * @throws RuntimeException if {@link Event#getId()} is non-null.
 	 */

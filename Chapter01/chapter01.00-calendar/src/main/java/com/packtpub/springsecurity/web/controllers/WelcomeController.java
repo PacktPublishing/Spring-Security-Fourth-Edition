@@ -47,7 +47,7 @@ public class WelcomeController {
 	@GetMapping(value = "/")
 	public String welcome() {
 		String name = context.getMessage("customer.name",
-				new Object[] { 46, "http://www.baselogic.com" }, Locale.US);
+				new Object[] { 46, "https://www.packtpub.com" }, Locale.US);
 
 		logger.info("Customer name (English) : " + name);
 		logger.info("*** welcome(): {}", name);

@@ -12,7 +12,6 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
 import static org.springframework.security.config.Customizer.withDefaults;
-import static org.springframework.security.web.util.matcher.AntPathRequestMatcher.antMatcher;
 
 /**
  * Spring Security Config Class
@@ -48,7 +47,7 @@ public class SecurityConfig {
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		http
 				.authorizeHttpRequests( authz -> authz
-						.requestMatchers(antMatcher("/**")).hasRole("USER")
+						.requestMatchers("/**").hasRole("USER")
 						.anyRequest().authenticated()
 				)
 				.formLogin(withDefaults())

@@ -11,7 +11,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
 import static org.springframework.security.config.Customizer.withDefaults;
-import static org.springframework.security.web.util.matcher.AntPathRequestMatcher.antMatcher;
 
 /**
  * Spring Security Config Class
@@ -32,18 +31,18 @@ public class SecurityConfig {
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		http.authorizeHttpRequests( authz -> authz
-						.requestMatchers(antMatcher("/webjars/**")).permitAll()
-						.requestMatchers(antMatcher("/css/**")).permitAll()
-						.requestMatchers(antMatcher("/favicon.ico")).permitAll()
+						.requestMatchers("/webjars/**").permitAll()
+						.requestMatchers("/css/**").permitAll()
+						.requestMatchers("/favicon.ico").permitAll()
 						// H2 console:
-						.requestMatchers(antMatcher("/admin/h2/**")).fullyAuthenticated()
-						.requestMatchers(antMatcher("/")).permitAll()
-						.requestMatchers(antMatcher("/login/*")).permitAll()
-						.requestMatchers(antMatcher("/logout")).permitAll()
-						.requestMatchers(antMatcher("/signup/*")).permitAll()
-						.requestMatchers(antMatcher("/errors/**")).permitAll()
-						.requestMatchers(antMatcher("/events/")).hasRole("ADMIN")
-						.requestMatchers(antMatcher("/**")).hasRole("USER"))
+						.requestMatchers("/admin/h2/**").fullyAuthenticated()
+						.requestMatchers("/").permitAll()
+						.requestMatchers("/login/*").permitAll()
+						.requestMatchers("/logout").permitAll()
+						.requestMatchers("/signup/*").permitAll()
+						.requestMatchers("/errors/**").permitAll()
+						.requestMatchers("/events/").hasRole("ADMIN")
+						.requestMatchers("/**").hasRole("USER"))
 
 				.exceptionHandling(exceptions -> exceptions
 						.accessDeniedPage("/errors/403"))

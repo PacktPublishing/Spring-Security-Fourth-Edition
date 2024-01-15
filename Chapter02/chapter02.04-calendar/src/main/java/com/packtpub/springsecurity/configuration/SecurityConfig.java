@@ -12,13 +12,11 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.access.expression.WebExpressionAuthorizationManager;
 
-import static org.springframework.security.web.util.matcher.AntPathRequestMatcher.antMatcher;
-
 /**
  * Spring Security Config Class
  */
 @Configuration
-@EnableWebSecurity(debug = true)
+@EnableWebSecurity
 public class SecurityConfig {
 
 
@@ -68,15 +66,15 @@ public class SecurityConfig {
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		http
 				.authorizeHttpRequests( authz -> authz
-						.requestMatchers(antMatcher("/")).access(new WebExpressionAuthorizationManager("hasAnyRole('ANONYMOUS', 'USER')"))
-						.requestMatchers(antMatcher("/resources/**")).permitAll()
-						.requestMatchers(antMatcher("/webjars/**")).permitAll()
-						.requestMatchers(antMatcher("/login/*")).access(new WebExpressionAuthorizationManager("hasAnyRole('ANONYMOUS', 'USER')"))
-						.requestMatchers(antMatcher("/logout/*")).access(new WebExpressionAuthorizationManager("hasAnyRole('ANONYMOUS', 'USER')"))
-						.requestMatchers(antMatcher("/errors/**")).permitAll()
-						.requestMatchers(antMatcher("/admin/*")).access(new WebExpressionAuthorizationManager("hasRole('ADMIN')"))
-						.requestMatchers(antMatcher("/events/")).access(new WebExpressionAuthorizationManager("hasRole('ADMIN')"))
-						.requestMatchers(antMatcher("/**")).access(new WebExpressionAuthorizationManager("hasRole('USER')"))
+						.requestMatchers("/").access(new WebExpressionAuthorizationManager("hasAnyRole('ANONYMOUS', 'USER')"))
+						.requestMatchers("/resources/**").permitAll()
+						.requestMatchers("/webjars/**").permitAll()
+						.requestMatchers("/login/*").access(new WebExpressionAuthorizationManager("hasAnyRole('ANONYMOUS', 'USER')"))
+						.requestMatchers("/logout/*").access(new WebExpressionAuthorizationManager("hasAnyRole('ANONYMOUS', 'USER')"))
+						.requestMatchers("/errors/**").permitAll()
+						.requestMatchers("/admin/*").access(new WebExpressionAuthorizationManager("hasRole('ADMIN')"))
+						.requestMatchers("/events/").access(new WebExpressionAuthorizationManager("hasRole('ADMIN')"))
+						.requestMatchers("/**").access(new WebExpressionAuthorizationManager("hasRole('USER')"))
 				)
 				.exceptionHandling(exceptions -> exceptions
 						.accessDeniedPage("/errors/403"))

@@ -5,47 +5,31 @@ import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRegistration;
 
-import org.springframework.web.WebApplicationInitializer;
+import org.springframework.core.annotation.Order;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 
 /**
  * Replaces web.xml.txt in Servlet v.3.0+
  *
- * @see
  */
-public class WebAppInitializer
-		extends AbstractAnnotationConfigDispatcherServletInitializer
-		implements WebApplicationInitializer {
+@Order(1)
+public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
-	/**
-	 * Get root config classes class [ ].
-	 *
-	 * @return the class [ ]
-	 */
+
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
-		return new Class[] { JavaConfig.class };
+		return null;
 	}
 
-	/**
-	 * Get servlet config classes class [ ].
-	 *
-	 * @return the class [ ]
-	 */
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
-		return new Class[] { WebMvcConfig.class };
+		return new Class[] { JavaConfig.class, WebMvcConfig.class };
 	}
 
-	/**
-	 * Get servlet mappings string [ ].
-	 *
-	 * @return the string [ ]
-	 */
 	@Override
 	protected String[] getServletMappings() {
-		return new String[] { "/" }; // or *.html
+		return new String[] { "/" };
 	}
 
 	/**

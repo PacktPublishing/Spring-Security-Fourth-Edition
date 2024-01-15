@@ -76,7 +76,6 @@ public class DefaultCalendarService implements CalendarService {
 	public int createUser(CalendarUser user) {
 		String encodedPassword = passwordEncoder.encode(user.getPassword());
 		user.setPassword(encodedPassword);
-		int userId = userDao.createUser(user);
 		return userDao.createUser(user);
 	}
 }

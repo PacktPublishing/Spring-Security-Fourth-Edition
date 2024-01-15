@@ -24,8 +24,6 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
-    // OAuth2 Configuration:
-	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
 	// H2 db
 	implementation 'com.h2database:h2'
 	// webjars

@@ -1,50 +1,35 @@
 package com.packtpub.springsecurity.web.configuration;
 
-import com.packtpub.springsecurity.configuration.DataSourceConfig;
 import com.packtpub.springsecurity.configuration.JavaConfig;
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRegistration;
 
+import org.springframework.core.annotation.Order;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 
 /**
  * Replaces web.xml.txt in Servlet v.3.0+
  *
- * @see
  */
-public class WebAppInitializer
-		extends AbstractAnnotationConfigDispatcherServletInitializer {
+@Order(1)
+public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
-	/**
-	 * Get root config classes class [ ].
-	 *
-	 * @return the class [ ]
-	 */
+
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
-		return new Class[] { JavaConfig.class, DataSourceConfig.class };
+		return null;
 	}
 
-	/**
-	 * Get servlet config classes class [ ].
-	 *
-	 * @return the class [ ]
-	 */
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
-		return new Class[] { WebMvcConfig.class };
+		return new Class[] { JavaConfig.class, WebMvcConfig.class };
 	}
 
-	/**
-	 * Get servlet mappings string [ ].
-	 *
-	 * @return the string [ ]
-	 */
 	@Override
 	protected String[] getServletMappings() {
-		return new String[] { "/*" };
+		return new String[] { "/" };
 	}
 
 	/**

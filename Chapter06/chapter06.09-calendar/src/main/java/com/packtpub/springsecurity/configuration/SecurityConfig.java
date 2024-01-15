@@ -61,11 +61,11 @@ public class SecurityConfig {
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		http.authorizeHttpRequests( authz -> authz
-						.requestMatchers(antMatcher("/webjars/**")).permitAll()
-						.requestMatchers(antMatcher("/css/**")).permitAll()
-						.requestMatchers(antMatcher("/favicon.ico")).permitAll()
+						.requestMatchers("/webjars/**").permitAll()
+						.requestMatchers("/css/**").permitAll()
+						.requestMatchers("/favicon.ico").permitAll()
 						// H2 console:
-						.requestMatchers(antMatcher("/admin/h2/**")).permitAll()
+						.requestMatchers("/admin/h2/**").permitAll()
 						.requestMatchers(antMatcher("/")).permitAll()
 						.requestMatchers(antMatcher("/login/*")).permitAll()
 						.requestMatchers(antMatcher("/logout")).permitAll()

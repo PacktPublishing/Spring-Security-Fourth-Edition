@@ -17,8 +17,6 @@ import org.springframework.security.web.access.expression.WebExpressionAuthoriza
 import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
 
-import static org.springframework.security.web.util.matcher.AntPathRequestMatcher.antMatcher;
-
 /**
  * Spring Security Config Class
  *
@@ -45,19 +43,19 @@ public class SecurityConfig {
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http, PersistentTokenRepository persistentTokenRepository) throws Exception {
 		http.authorizeHttpRequests( authz -> authz
-						.requestMatchers(antMatcher("/webjars/**")).permitAll()
-						.requestMatchers(antMatcher("/css/**")).permitAll()
-						.requestMatchers(antMatcher("/favicon.ico")).permitAll()
+						.requestMatchers("/webjars/**").permitAll()
+						.requestMatchers("/css/**").permitAll()
+						.requestMatchers("/favicon.ico").permitAll()
 						// H2 console:
-						.requestMatchers(antMatcher("/admin/h2/**"))
+						.requestMatchers("/admin/h2/**")
 						.access(new WebExpressionAuthorizationManager("isFullyAuthenticated() and hasRole('ADMIN')"))
-						.requestMatchers(antMatcher("/")).permitAll()
-						.requestMatchers(antMatcher("/login/*")).permitAll()
-						.requestMatchers(antMatcher("/logout")).permitAll()
-						.requestMatchers(antMatcher("/signup/*")).permitAll()
-						.requestMatchers(antMatcher("/errors/**")).permitAll()
-						.requestMatchers(antMatcher("/events/")).hasRole("ADMIN")
-						.requestMatchers(antMatcher("/**")).hasRole("USER"))
+						.requestMatchers("/").permitAll()
+						.requestMatchers("/login/*").permitAll()
+						.requestMatchers("/logout").permitAll()
+						.requestMatchers("/signup/*").permitAll()
+						.requestMatchers("/errors/**").permitAll()
+						.requestMatchers("/events/").hasRole("ADMIN")
+						.requestMatchers("/**").hasRole("USER"))
 
 				.exceptionHandling(exceptions -> exceptions
 						.accessDeniedPage("/errors/403"))

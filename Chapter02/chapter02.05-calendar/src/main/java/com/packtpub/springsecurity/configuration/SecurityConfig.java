@@ -11,13 +11,11 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
-import static org.springframework.security.web.util.matcher.AntPathRequestMatcher.antMatcher;
-
 /**
  * Spring Security Config Class
  */
 @Configuration
-@EnableWebSecurity(debug = true)
+@EnableWebSecurity
 public class SecurityConfig {
 
 	/**
@@ -66,15 +64,15 @@ public class SecurityConfig {
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		http
 				.authorizeHttpRequests( authz -> authz
-						.requestMatchers(antMatcher("/resources/**")).permitAll()
-						.requestMatchers(antMatcher("/webjars/**")).permitAll()
-						.requestMatchers(antMatcher("/")).permitAll()
-						.requestMatchers(antMatcher("/login/*")).permitAll()
-						.requestMatchers(antMatcher("/logout/*")).permitAll()
-						.requestMatchers(antMatcher("/errors/**")).permitAll()
-						.requestMatchers(antMatcher("/admin/*")).hasRole("ADMIN")
-						.requestMatchers(antMatcher("/events/")).hasRole("ADMIN")
-						.requestMatchers(antMatcher("/**")).hasRole("USER")
+						.requestMatchers("/resources/**").permitAll()
+						.requestMatchers("/webjars/**").permitAll()
+						.requestMatchers("/").permitAll()
+						.requestMatchers("/login/*").permitAll()
+						.requestMatchers("/logout/*").permitAll()
+						.requestMatchers("/errors/**").permitAll()
+						.requestMatchers("/admin/*").hasRole("ADMIN")
+						.requestMatchers("/events/").hasRole("ADMIN")
+						.requestMatchers("/**").hasRole("USER")
 				)
 				.exceptionHandling(exceptions -> exceptions
 						.accessDeniedPage("/errors/403"))
