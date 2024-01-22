@@ -95,3 +95,25 @@ include 'Chapter10:chapter10.03-calendar'
 include 'Chapter10:chapter10.04-calendar'
 include 'Chapter10:chapter10.05-calendar'
 include 'Chapter10:chapter10.06-calendar'
+
+//---------------------------------------------------------------------------//
+// Chapter 11: Fine-Grained Access Control
+include 'Chapter11:chapter11.00-calendar'
+include 'Chapter11:chapter11.01-calendar'
+include 'Chapter11:chapter11.02-calendar'
+include 'Chapter11:chapter11.03-calendar'
+include 'Chapter11:chapter11.04-calendar'
+include 'Chapter11:chapter11.05-calendar'
+include 'Chapter11:chapter11.06-calendar'
+include 'Chapter11:chapter11.07-calendar'
+include 'Chapter11:chapter11.08-calendar'
+
+
+
+
+
+
+
+
+
+
