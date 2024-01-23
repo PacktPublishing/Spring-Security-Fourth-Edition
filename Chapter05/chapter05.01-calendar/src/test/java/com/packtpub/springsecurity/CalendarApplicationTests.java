@@ -33,7 +33,7 @@ public class CalendarApplicationTests {
 						.param("password", "user1")
 				)
 				.andExpect(status().is3xxRedirection())
-				.andExpect(redirectedUrl("/default"))
+				.andExpect(redirectedUrl("/login/form?error"))
 				.andDo(print())
 		;
 	}
