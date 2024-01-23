@@ -13,6 +13,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 
@@ -31,7 +32,8 @@ public class CalendarUser implements Principal, Serializable {
 	private static final long serialVersionUID = 8433999509932007961L;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@SequenceGenerator(name = "user_id_seq", initialValue = 1000)
+	@GeneratedValue(generator = "user_id_seq")
 	private Integer id;
 
 	private String firstName;

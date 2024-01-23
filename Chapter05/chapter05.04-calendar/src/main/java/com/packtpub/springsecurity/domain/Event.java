@@ -28,7 +28,7 @@ import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 public class Event implements Serializable{
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	@NotEmpty(message = "Summary is required")
 	private String summary;
