@@ -42,8 +42,6 @@ public class MongoCalendarUserDao implements CalendarUserDao {
         this.roleRepository = roleRepository;
     }
 
-    // --- CalendarUserDao methods ---
-
     @Override
     @Transactional(readOnly = true)
     public CalendarUser getUser(final int id) {

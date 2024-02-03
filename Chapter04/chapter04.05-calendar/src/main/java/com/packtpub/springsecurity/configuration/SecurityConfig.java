@@ -116,7 +116,6 @@ public class SecurityConfig {
 
 
 	/**
-	 * Standard SHA-256 Password Encoder
 	 *
 	 * @return ShaPasswordEncoder password encoder
 	 */

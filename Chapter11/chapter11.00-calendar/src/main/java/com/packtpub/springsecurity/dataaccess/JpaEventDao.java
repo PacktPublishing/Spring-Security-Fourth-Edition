@@ -20,11 +20,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Repository
 public class JpaEventDao implements EventDao {
 
-    // --- members ---
-
     private EventRepository repository;
-
-    // --- constructors ---
 
     public JpaEventDao(EventRepository repository) {
         if (repository == null) {
@@ -32,8 +28,6 @@ public class JpaEventDao implements EventDao {
         }
         this.repository = repository;
     }
-
-    // --- EventService ---
 
     @Override
     @Transactional(readOnly = true)

@@ -8,8 +8,6 @@ import com.packtpub.springsecurity.domain.CalendarUser;
 import com.packtpub.springsecurity.domain.Role;
 import com.packtpub.springsecurity.repository.CalendarUserRepository;
 import com.packtpub.springsecurity.repository.RoleRepository;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Repository;
@@ -24,15 +22,8 @@ import org.springframework.transaction.annotation.Transactional;
 @Repository
 public class JpaCalendarUserDao implements CalendarUserDao {
 
-    private static final Logger logger = LoggerFactory
-            .getLogger(JpaCalendarUserDao.class);
-
-    // --- members ---
-
     private CalendarUserRepository userRepository;
     private RoleRepository roleRepository;
-
-    // --- constructors ---
 
     public JpaCalendarUserDao(final CalendarUserRepository repository,
                               final RoleRepository roleRepository) {
@@ -46,8 +37,6 @@ public class JpaCalendarUserDao implements CalendarUserDao {
         this.userRepository = repository;
         this.roleRepository = roleRepository;
     }
-
-    // --- CalendarUserDao methods ---
 
     @Override
     @Transactional(readOnly = true)

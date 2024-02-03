@@ -95,9 +95,9 @@ public class SecurityConfig {
 
 
 	/**
-	 * Standard SHA-256 Password Encoder
+	 * Standard BCrypt Password Encoder
 	 *
-	 * @return ShaPasswordEncoder
+	 * @return PasswordEncoder
 	 */
 	@Bean
 	public PasswordEncoder passwordEncoder() {

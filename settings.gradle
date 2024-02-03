@@ -1,3 +1,10 @@
+pluginManagement {
+	repositories {
+		maven { url 'https://repo.spring.io/milestone' }
+		gradlePluginPortal()
+	}
+}
+
 rootProject.name = 'Spring-Security-Fourth-Edition'
 
 // Chapter 1:  Anatomy of an Unsafe Application
@@ -107,6 +114,17 @@ include 'Chapter11:chapter11.05-calendar'
 include 'Chapter11:chapter11.06-calendar'
 include 'Chapter11:chapter11.07-calendar'
 include 'Chapter11:chapter11.08-calendar'
+
+//---------------------------------------------------------------------------//
+// Chapter 12: Access Control Lists
+include 'Chapter12:chapter12.00-calendar'
+include 'Chapter12:chapter12.01-calendar'
+include 'Chapter12:chapter12.02-calendar'
+include 'Chapter12:chapter12.03-calendar'
+include 'Chapter12:chapter12.04-calendar'
+include 'Chapter12:chapter12.05-calendar'
+
+
 
 
 

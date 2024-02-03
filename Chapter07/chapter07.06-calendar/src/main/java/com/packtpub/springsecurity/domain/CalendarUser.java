@@ -31,8 +31,8 @@ public class CalendarUser implements Principal, Serializable {
 	private static final long serialVersionUID = 8433999509932007961L;
 
 	@Id
-	@SequenceGenerator(name = "EntityTwoSequence", initialValue = 1000)
-	@GeneratedValue(generator = "EntityTwoSequence")
+	@SequenceGenerator(name = "user_id_seq", initialValue = 1000)
+	@GeneratedValue(generator = "user_id_seq")
 	private Integer id;
 
 	private String firstName;
