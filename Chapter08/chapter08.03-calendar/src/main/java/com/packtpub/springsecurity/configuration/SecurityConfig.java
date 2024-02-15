@@ -50,7 +50,7 @@ public class SecurityConfig {
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http,
 			PersistentTokenRepository persistentTokenRepository,
-			X509AuthenticationFilter x509Filter, UserDetailsService userDetailsService) throws Exception {
+			X509AuthenticationFilter x509Filter) throws Exception {
 		http.authorizeHttpRequests( authz -> authz
 						.requestMatchers("/webjars/**").permitAll()
 						.requestMatchers("/css/**").permitAll()

@@ -58,3 +58,6 @@ throughout the book.
 
 ***
 12. [Access Control Lists](Chapter12/README.md)
+
+***
+13. [Custom Authorization](Chapter13/README.md)

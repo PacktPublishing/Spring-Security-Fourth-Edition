@@ -44,7 +44,7 @@ public class SecurityConfig {
 						.requestMatchers("/admin/h2/**")
 						.access(new WebExpressionAuthorizationManager("isFullyAuthenticated() and hasRole('ADMIN')"))
 						// NOTE: "/events/" is now protected by ACL:
-						//.requestMatchers(antMatcher("/events/")).hasRole("ADMIN")
+						//.requestMatchers("/events/").hasRole("ADMIN")
 						.requestMatchers("/**").hasRole("USER"))
 				.exceptionHandling(exceptions -> exceptions
 						.accessDeniedPage("/errors/403"))

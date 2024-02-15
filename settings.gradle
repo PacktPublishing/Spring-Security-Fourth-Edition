@@ -124,6 +124,15 @@ include 'Chapter12:chapter12.03-calendar'
 include 'Chapter12:chapter12.04-calendar'
 include 'Chapter12:chapter12.05-calendar'
 
+//---------------------------------------------------------------------------//
+// Chapter 13: Custom Authorization
+include 'Chapter13:chapter13.00-calendar'
+include 'Chapter13:chapter13.01-calendar'
+include 'Chapter13:chapter13.02-calendar'
+include 'Chapter13:chapter13.03-calendar'
+include 'Chapter13:chapter13.04-calendar'
+include 'Chapter13:chapter13.05-calendar'
+include 'Chapter13:chapter13.06-calendar'
 
 
 

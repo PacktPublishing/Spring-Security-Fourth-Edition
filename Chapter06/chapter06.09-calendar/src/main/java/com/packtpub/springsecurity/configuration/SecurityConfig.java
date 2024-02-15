@@ -15,8 +15,6 @@ import org.springframework.security.ldap.authentication.ad.ActiveDirectoryLdapAu
 import org.springframework.security.ldap.search.FilterBasedLdapUserSearch;
 import org.springframework.security.web.SecurityFilterChain;
 
-import static org.springframework.security.web.util.matcher.AntPathRequestMatcher.antMatcher;
-
 /**
  * Spring Security Config Class
  *
@@ -66,14 +64,14 @@ public class SecurityConfig {
 						.requestMatchers("/favicon.ico").permitAll()
 						// H2 console:
 						.requestMatchers("/admin/h2/**").permitAll()
-						.requestMatchers(antMatcher("/")).permitAll()
-						.requestMatchers(antMatcher("/login/*")).permitAll()
-						.requestMatchers(antMatcher("/logout")).permitAll()
-						.requestMatchers(antMatcher("/signup/*")).permitAll()
-						.requestMatchers(antMatcher("/errors/**")).permitAll()
-						.requestMatchers(antMatcher("/admin/*")).hasAuthority("ADMIN")
-						.requestMatchers(antMatcher("/events/")).hasAuthority("ADMIN")
-						.requestMatchers(antMatcher("/**")).hasAuthority("USER"))
+						.requestMatchers("/").permitAll()
+						.requestMatchers("/login/*").permitAll()
+						.requestMatchers("/logout").permitAll()
+						.requestMatchers("/signup/*").permitAll()
+						.requestMatchers("/errors/**").permitAll()
+						.requestMatchers("/admin/*").hasAuthority("ADMIN")
+						.requestMatchers("/events/").hasAuthority("ADMIN")
+						.requestMatchers("/**").hasAuthority("USER"))
 
 				.exceptionHandling(exceptions -> exceptions
 						.accessDeniedPage("/errors/403"))

@@ -82,7 +82,7 @@ public class SecurityConfig {
 	private Converter<ResponseToken, Saml2Authentication> groupsConverter() {
 		Converter<ResponseToken, Saml2Authentication> delegate =
 				OpenSaml4AuthenticationProvider.createDefaultResponseAuthenticationConverter();
-		return (responseToken) -> {
+		return responseToken -> {
 			Saml2Authentication authentication = delegate.convert(responseToken);
 			Saml2AuthenticatedPrincipal principal = (Saml2AuthenticatedPrincipal) authentication.getPrincipal();
 			List<String> groups = principal.getAttribute("groups");
