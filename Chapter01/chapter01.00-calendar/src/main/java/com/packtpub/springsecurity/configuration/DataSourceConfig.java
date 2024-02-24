@@ -22,7 +22,8 @@ import org.springframework.validation.beanvalidation.MethodValidationPostProcess
  * The type Data source config.
  */
 @Configuration
-public class DataSourceConfig {
+public class 
+DataSourceConfig {
 
 	/**
 	 * The Database.

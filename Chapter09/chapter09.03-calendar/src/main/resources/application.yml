@@ -47,7 +47,7 @@ spring:
             client-id: 27b810dab6147800a314
             client-secret: 6ce7c31699a8d3032b1f9e7e706c5ef7888e524c
             
-## Chapter 8 TLS over HTTP/1.1:
+## Chapter 8 TLS over HTTP
 ## https://localhost:8443
 server:
   port: 8443

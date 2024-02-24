@@ -6,10 +6,16 @@ Base line Starting from chapter01
 
 ### Running the project ###
 
-Run the following command from the project directory:
+Run the following command with Gradle from the project directory:
 
 ```shell
 ./gradlew tomcatRun
+```
+
+Or if you are using Maven, run the following command with Maven from the project directory:
+
+```shell
+mvn clean package cargo:run
 ```
 
 ### Testing the application ###

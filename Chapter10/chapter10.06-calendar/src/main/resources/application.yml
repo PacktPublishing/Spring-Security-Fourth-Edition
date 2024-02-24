@@ -51,7 +51,7 @@ spring:
               binding: POST
               url: "{baseUrl}/logout/saml2/slo"
 
-## Chapter 8 TLS over HTTP/1.1:
+## Chapter 8 TLS over HTTP
 ## https://localhost:8443
 server:
   port: 8443

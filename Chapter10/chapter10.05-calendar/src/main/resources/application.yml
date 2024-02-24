@@ -45,7 +45,7 @@ spring:
               metadata-uri: https://dev-xxxxx.okta.com/app/xxxxxx/sso/saml/metadata
 
 
-## Chapter 8 TLS over HTTP/1.1:
+## Chapter 8 TLS over HTTP
 ## https://localhost:8443
 server:
   port: 8443

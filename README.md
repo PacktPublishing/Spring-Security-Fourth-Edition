@@ -61,3 +61,9 @@ throughout the book.
 
 ***
 13. [Custom Authorization](Chapter13/README.md)
+
+***
+14. [Session Management](Chapter14/README.md)
+
+***
+15. [Additional Spring Security Features](Chapter15/README.md)

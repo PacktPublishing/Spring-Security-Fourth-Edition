@@ -59,7 +59,7 @@ spring:
             user-name-attribute: sub
             jwk-set-uri: https://dev-37686908.okta.com/oauth2/v1/keys
 
-## Chapter 8 TLS over HTTP/1.1:
+## Chapter 8 TLS over HTTP
 ## https://localhost:8443
 server:
   port: 8443

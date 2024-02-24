@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>Chapter15</artifactId>
+	<packaging>pom</packaging>
+
+	<parent>
+		<groupId>com.packtpub.springsecurity</groupId>
+		<artifactId>Spring-Security-Fourth-Edition</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<modules>
+		<module>chapter15.00-calendar</module>
+		<module>chapter15.01-calendar</module>
+		<module>chapter15.02-calendar</module>
+	</modules>
+
+</project>

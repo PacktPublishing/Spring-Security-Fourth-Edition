@@ -134,9 +134,21 @@ include 'Chapter13:chapter13.04-calendar'
 include 'Chapter13:chapter13.05-calendar'
 include 'Chapter13:chapter13.06-calendar'
 
+//---------------------------------------------------------------------------//
+// Chapter 14: Session Management
+include 'Chapter14:chapter14.00-calendar'
+include 'Chapter14:chapter14.01-calendar'
+include 'Chapter14:chapter14.02-calendar'
+include 'Chapter14:chapter14.03-calendar'
+include 'Chapter14:chapter14.04-calendar'
+include 'Chapter14:chapter14.05-calendar'
+include 'Chapter14:chapter14.06-calendar'
 
-
-
+//---------------------------------------------------------------------------//
+// Chapter 15: Additional Spring Security Features
+include 'Chapter15:chapter15.00-calendar'
+include 'Chapter15:chapter15.01-calendar'
+include 'Chapter15:chapter15.02-calendar'
 
 
 
