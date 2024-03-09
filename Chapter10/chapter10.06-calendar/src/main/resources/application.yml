@@ -56,7 +56,7 @@ spring:
 server:
   port: 8443
   ssl:
-    key-store: "classpath:keys/jbcp_clientauth.p12"
+    key-store: classpath:keys/jbcp_clientauth.p12
     key-store-password: changeit
     keyStoreType: PKCS12
     keyAlias: jbcpclient
