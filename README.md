@@ -67,3 +67,6 @@ throughout the book.
 
 ***
 15. [Additional Spring Security Features](Chapter15/README.md)
+
+***
+16. [Migration to Spring Security 6](Chapter16/README.md)

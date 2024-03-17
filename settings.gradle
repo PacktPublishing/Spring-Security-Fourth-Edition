@@ -150,6 +150,10 @@ include 'Chapter15:chapter15.00-calendar'
 include 'Chapter15:chapter15.01-calendar'
 include 'Chapter15:chapter15.02-calendar'
 
+//---------------------------------------------------------------------------//
+// Chapter 16: Migration to Spring Security 6
+include 'Chapter16:chapter16.00-calendar'
+include 'Chapter16:chapter16.01-calendar'
 
 
 
