@@ -155,6 +155,14 @@ include 'Chapter15:chapter15.02-calendar'
 include 'Chapter16:chapter16.00-calendar'
 include 'Chapter16:chapter16.01-calendar'
 
+// Chapter 17: Microservice security with OAuth2 and JSON Web Tokens
+include 'Chapter17:chapter17.00-authorization-server'
+include 'Chapter17:chapter17.00-calendar'
+include 'Chapter17:chapter17.01-calendar'
+include 'Chapter17:chapter17.02-calendar'
+include 'Chapter17:chapter17.03-calendar'
+include 'Chapter17:chapter17.03-calendar-client'
+
 
 
 

@@ -1,0 +1,24 @@
+#------------------------------------------------------------------------------#
+# Application YAML #
+# inside ./src/main/resources/application.yml
+#------------------------------------------------------------------------------#
+jbcp-calendar:
+  events:
+    api: http://localhost:8080/events/
+spring:
+## Chapter 17 Authorization Server
+  security:
+    oauth2:
+      client:
+        registration:
+          calendar-client:
+            client-id: jbcp-calendar
+            client-secret: secret
+            scope: events.read
+            authorization-grant-type: client_credentials
+            client-name: Calendar Client
+        provider:
+          calendar-client:
+            token-uri: http://localhost:9000/oauth2/token
+server:
+  port: 8888

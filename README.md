@@ -70,3 +70,6 @@ throughout the book.
 
 ***
 16. [Migration to Spring Security 6](Chapter16/README.md)
+
+***
+17. [Microservice Security with OAuth 2 and JSON Web Tokens](Chapter17/README.md)

@@ -1,0 +1,29 @@
+#------------------------------------------------------------------------------#
+# Application YAML #
+# inside ./src/main/resources/application.yml
+#------------------------------------------------------------------------------#
+spring:
+  datasource:
+    url: jdbc:h2:mem:dataSource;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: false
+    hibernate:
+      ddl-auto: create-drop
+    defer-datasource-initialization: true
+
+  sql:
+    init:
+      continue-on-error: true
+## Chapter 17 Authorization Server
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:9000
+
+##---------------------------------------------------------------------------##
