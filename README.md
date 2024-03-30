@@ -73,3 +73,6 @@ throughout the book.
 
 ***
 17. [Microservice Security with OAuth 2 and JSON Web Tokens](Chapter17/README.md)
+
+***
+18. [Single Sign-On with the Central Authentication Service](Chapter18/README.md)

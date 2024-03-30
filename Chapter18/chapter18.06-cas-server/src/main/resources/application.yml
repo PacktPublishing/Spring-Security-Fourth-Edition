@@ -1,0 +1,38 @@
+# Application properties that need to be
+# embedded within the web application can be included here
+server:
+  port: 9443
+  ssl:
+    key-store: classpath:/etc/cas/thekeystore
+    key-store-password: changeit
+
+## Embedded LDAP
+spring:
+  ldap:
+    embedded:
+      ldif: classpath:/ldif/calendar.ldif
+      baseDn: dc=jbcpcalendar,dc=com
+      port: 33389
+      credential:
+        username: uid=admin,ou=system
+        password: secret
+
+
+        
+cas:
+  service-registry:
+    core:
+      init-from-json: true
+    json:
+      location: classpath:/etc/cas/services
+  authn:
+    ldap[0]:
+      principalAttributeList: sn:lastName,cn:fullName,description:role
+      useStartTls: false
+      search-filter: uid={user}
+      type: AUTHENTICATED
+      ldapUrl: ldap://localhost:${spring.ldap.embedded.port}
+      baseDn: ${spring.ldap.embedded.baseDn}
+      bindDn: ${spring.ldap.embedded.credential.username}
+      bindCredential: ${spring.ldap.embedded.credential.password}
+

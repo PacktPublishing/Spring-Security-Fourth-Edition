@@ -163,7 +163,19 @@ include 'Chapter17:chapter17.02-calendar'
 include 'Chapter17:chapter17.03-calendar'
 include 'Chapter17:chapter17.03-calendar-client'
 
-
+//---------------------------------------------------------------------------//
+// Chapter 18: Single Sign-on with Central Authentication Service
+// Uncomment if you are using Java 21 only
+//include 'Chapter18:chapter18.00-cas-server' 
+include 'Chapter18:chapter18.00-calendar'
+include 'Chapter18:chapter18.01-calendar'
+include 'Chapter18:chapter18.02-calendar'
+include 'Chapter18:chapter18.03-calendar'
+include 'Chapter18:chapter18.04-calendar'
+//include 'Chapter18:chapter18.05-cas-server'
+include 'Chapter18:chapter18.05-calendar'
+//include 'Chapter18:chapter18.06-cas-server'
+include 'Chapter18:chapter18.06-calendar'
 
 
 

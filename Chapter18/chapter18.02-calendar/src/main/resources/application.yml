@@ -1,0 +1,64 @@
+#------------------------------------------------------------------------------#
+# Application YAML #
+# inside ./src/main/resources/application.yml
+#------------------------------------------------------------------------------#
+debug: false
+
+spring:
+  ## Thymeleaf configuration:
+  thymeleaf:
+    cache: false
+    mode: HTML
+
+  ## H2 Servlet setting
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+      path: /admin/h2
+
+  datasource:
+    url: jdbc:h2:mem:dataSource;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: false
+    hibernate:
+      ddl-auto: create-drop
+    defer-datasource-initialization: true
+  
+  sql:
+    init:
+      continue-on-error: true
+
+## Chapter 8 TLS over HTTP
+## https://localhost:8443
+server:
+  port: 8443
+  ssl:
+    key-store: "classpath:keys/tomcat.jks"
+    key-store-password: changeit
+    keyStoreType: JKS
+    protocol: TLS
+cas:
+  base:
+    url: https://localhost:9443/cas
+  login:
+    url: ${cas.base.url}/login
+  logout:
+    url: ${cas.base.url}/logout
+service:
+  base:
+    url: https://localhost:8443
+
+logging:
+  level:
+    org:
+      springframework:
+        security: TRACE
+
+##---------------------------------------------------------------------------##
