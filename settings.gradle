@@ -177,6 +177,11 @@ include 'Chapter18:chapter18.05-calendar'
 //include 'Chapter18:chapter18.06-cas-server'
 include 'Chapter18:chapter18.06-calendar'
 
-
+//---------------------------------------------------------------------------//
+// Chapter 19: Build GraalVM native images
+include 'Chapter19:chapter19.00-calendar'
+include 'Chapter19:chapter19.01-calendar'
+include 'Chapter19:chapter19.02-calendar'
+include 'Chapter19:chapter19.03-calendar'
 
 

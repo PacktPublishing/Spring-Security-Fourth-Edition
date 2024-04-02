@@ -1,0 +1,11 @@
+[
+  {
+    "name": "java.util.List",
+    "methods": [
+      {
+        "name": "isEmpty",
+        "parameterTypes": []
+      }
+    ]
+  }
+]
