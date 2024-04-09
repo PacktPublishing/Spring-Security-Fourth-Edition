@@ -41,10 +41,10 @@ public class SecurityConfig {
 	 */
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-		http.authorizeHttpRequests( authz -> authz
+		http.authorizeRequests( authz -> authz
 						.requestMatchers("/favicon.ico").permitAll()
 						.requestMatchers("/admin/h2/**")
-						.access(new WebExpressionAuthorizationManager("isFullyAuthenticated() and hasRole('ADMIN')"))
+						.access("isFullyAuthenticated() and hasRole('ADMIN')")
 						.requestMatchers("/").permitAll()
 						.requestMatchers("/login/*").permitAll()
 						.requestMatchers("/logout").permitAll()
