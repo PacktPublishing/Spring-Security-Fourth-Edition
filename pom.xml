@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.packtpub.springsecurity</groupId>
 	<artifactId>Spring-Security-Fourth-Edition</artifactId>
@@ -26,6 +26,7 @@
 
 	<modules>
 		<module>Chapter01</module>
+		<module>Chapter02</module>
 		<module>Chapter03</module>
 		<module>Chapter04</module>
 		<module>Chapter05</module>
