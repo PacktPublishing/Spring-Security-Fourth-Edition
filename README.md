@@ -1,15 +1,13 @@
 # Spring-Security-Fourth-Edition
 
+
 ## JBCP Calendar Application
 
-* Jim Bob CP Calendar Application
 * [Pact Publishing Book Home](https://www.packtpub.com/application-development/spring-security-fourth-edition)
-
-This code has been developed in [Gradle](http://gradle.org) and has a sub-project for each
-chapter milestone.
-[Thymeleaf](https://www.thymeleaf.org/) has been used as the view templating engine
-throughout the book.
-
+* Jim Bob CP Calendar Application for [Spring Security 6](https://docs.spring.io/spring-security/reference/index.html)
+* The code tested with [Java 17](https://openjdk.org/projects/jdk/17/) And [Java 21](https://openjdk.java.net/projects/jdk/21/)
+* This code supports both [Gradle](http://gradle.org) and [Maven](https://maven.apache.org/)
+* [Thymeleaf](https://www.thymeleaf.org/) has been used as the view templating engine
 
 ### Chapters
 
