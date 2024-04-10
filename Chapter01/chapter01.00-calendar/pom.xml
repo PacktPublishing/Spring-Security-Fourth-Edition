@@ -9,6 +9,8 @@
 	<packaging>war</packaging>
 
 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<jakarta.annotation-api.version>2.1.1</jakarta.annotation-api.version>
 		<hibernate-validator.version>8.0.1.Final</hibernate-validator.version>
 		<h2.version>2.2.224</h2.version>

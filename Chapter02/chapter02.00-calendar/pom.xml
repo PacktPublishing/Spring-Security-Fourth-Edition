@@ -9,6 +9,8 @@
 	<packaging>war</packaging>
 	
 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<jakarta.annotation-api.version>2.1.1</jakarta.annotation-api.version>
 		<hibernate-validator.version>8.0.1.Final</hibernate-validator.version>
 		<h2.version>2.2.224</h2.version>
@@ -23,6 +25,7 @@
 		<maven.compiler.source>${java.version}</maven.compiler.source>
 		<maven.compiler.target>${java.version}</maven.compiler.target>
 		<cargo-maven3-plugin.version>1.10.12</cargo-maven3-plugin.version>
+		<maven-war-plugin.version>3.4.0</maven-war-plugin.version>
 	</properties>
 
 	<dependencyManagement>
@@ -105,6 +108,11 @@
 
 	<build>
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>${maven-war-plugin.version}</version>
+			</plugin>
 			<plugin>
 				<groupId>org.codehaus.cargo</groupId>
 				<artifactId>cargo-maven3-plugin</artifactId>
