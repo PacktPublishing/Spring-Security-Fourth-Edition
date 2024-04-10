@@ -66,7 +66,7 @@ public class DefaultCalendarService implements CalendarService {
 	public List<CalendarUser> findUsersByEmail(String partialEmail) {
 		return userDao.findUsersByEmail(partialEmail);
 	}
-	
+
 	public int createUser(CalendarUser user) {
 		return userDao.createUser(user);
 	}

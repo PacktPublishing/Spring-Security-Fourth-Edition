@@ -84,6 +84,7 @@ out/
 # Package Files
 ######################
 *.jar
+*.log
 # Except for gradle-wrapper.jar
 !gradle-wrapper.jar
 *.war

@@ -78,5 +78,4 @@ public class WelcomeController {
 		// NOTE We could also get the Authentication from SecurityContextHolder.getContext().getAuthentication()
 		return webInvocationPriviledgeEvaluator.isAllowed("/admin/", authentication);
 	}
-	
 }

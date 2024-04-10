@@ -1,6 +1,19 @@
-# IMPORTANT NOTE<br/>******************************************************<br/>This repository is always automatically generated from the CAS Initializr. Do NOT submit pull requests here as the change-set will be overwritten on the next sync.To learn more, please visit the [CAS documentation](https://apereo.github.io/cas).<br/>******************************************************<br/>
-Apereo CAS WAR Overlay Template
-=====================================
+# chapter18.00-cas-server #
+
+Ensure that you have the following installed: JDK `21`
+
+Import an CAS SSL certificate inside the JRE keystore of your JBCP calendar application, by running the following command from the following location `chapter18.00-cas-server/src/main/resources/etc/cas`:
+```shell
+keytool -importcert -file cas.crt -alias cas-server -keystore $JDK_HOME/jre/lib/security/cacerts
+```
+
+Execute the below command using Gradle from the project directory:
+
+```shell
+./gradlew build run
+```
+
+# Apereo CAS WAR Overlay Template #
 
 WAR Overlay Type: `cas-overlay`
 

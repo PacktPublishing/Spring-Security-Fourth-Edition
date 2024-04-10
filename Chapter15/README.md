@@ -1,30 +1,15 @@
-# README #
+# Additional Spring Security Features #
 
-### Additional Spring Security Features ###
+***
 
-Not Done
+[chapter15.00-calendar](chapter15.00-calendar/README.md)
 
+***
 
-### Sections ###
+[chapter15.01-calendar](chapter15.01-calendar/README.md)
 
-#### 15.01-calendar ####
-CSRF Example
-TODO: Look into adding:
+***
 
-        // CSRF is enabled by default, with Java Config
-        http.csrf()
-                //.csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());
-                //TODO: CsrfAuthenticationStrategy
-                //TODO: .csrfTokenRepository()
-                //TODO: .requireCsrfProtectionMatcher()
-        ;
+[chapter15.02-calendar](chapter15.02-calendar/README.md)
 
-
-#### 15.02-calendar ####
-CORS Example
-
-
-#### 15.03-calendar ####
-TODO: Maybe work on
-* filter()
-
+***

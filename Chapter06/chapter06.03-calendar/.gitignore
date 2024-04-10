@@ -1,10 +1,10 @@
 HELP.md
 .gradle
 build/
-!gradle/wrapper/gradle-wrapper.jar
-!.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
+!gradle/wrapper/gradle-wrapper.jar
+!.mvn/wrapper/maven-wrapper.jar
 .java-version
 
 ### STS ###
@@ -24,6 +24,7 @@ bin/
 *.iws
 *.iml
 *.ipr
+*.log
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/

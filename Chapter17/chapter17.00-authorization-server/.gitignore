@@ -84,6 +84,7 @@ out/
 # Package Files
 ######################
 *.jar
+*.log
 *.war
 *.ear
 *.db

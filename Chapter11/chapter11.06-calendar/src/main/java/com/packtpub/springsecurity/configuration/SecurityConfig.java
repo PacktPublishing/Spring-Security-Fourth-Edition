@@ -12,6 +12,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.access.expression.WebExpressionAuthorizationManager;
 
+import static org.springframework.security.web.util.matcher.AntPathRequestMatcher.antMatcher;
+
 /**
  * Spring Security Config Class
  *
@@ -32,17 +34,19 @@ public class SecurityConfig {
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		http.authorizeHttpRequests( authz -> authz
-						.requestMatchers("/webjars/**").permitAll()
-						.requestMatchers("/css/**").permitAll()
-						.requestMatchers("/favicon.ico").permitAll()
-						.requestMatchers("/").permitAll()
-						.requestMatchers("/signup/*").permitAll()
-						.requestMatchers("/errors/**").permitAll()
+						.requestMatchers(antMatcher("/webjars/**")).permitAll()
+						.requestMatchers(antMatcher("/css/**")).permitAll()
+						.requestMatchers(antMatcher("/favicon.ico")).permitAll()
+						.requestMatchers(antMatcher("/")).permitAll()
+						.requestMatchers(antMatcher("/login/*")).permitAll()
+						.requestMatchers(antMatcher("/logout")).permitAll()
+						.requestMatchers(antMatcher("/signup/*")).permitAll()
+						.requestMatchers(antMatcher("/errors/**")).permitAll()
 						// H2 console
-						.requestMatchers("/admin/h2/**")
+						.requestMatchers(antMatcher("/admin/h2/**"))
 						.access(new WebExpressionAuthorizationManager("isFullyAuthenticated() and hasRole('ADMIN')"))
-						.requestMatchers("/events/").hasRole("ADMIN")
-						.requestMatchers("/**").hasRole("USER"))
+						.requestMatchers(antMatcher("/events/")).hasRole("ADMIN")
+						.requestMatchers(antMatcher("/**")).hasRole("USER"))
 
 				.exceptionHandling(exceptions -> exceptions
 						.accessDeniedPage("/errors/403"))

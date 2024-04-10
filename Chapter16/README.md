@@ -1,30 +1,11 @@
-# README #
+# Migration to Spring Security 6 #
 
-### Migration to Spring Security 6 ###
+***
 
-Not Done
+[chapter16.00-calendar](chapter16.00-calendar/README.md)
 
+***
 
-### Sections ###
+[chapter16.01-calendar](chapter16.01-calendar/README.md)
 
-#### 15.01-calendar ####
-CSRF Example
-TODO: Look into adding:
-
-        // CSRF is enabled by default, with Java Config
-        http.csrf()
-                //.csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());
-                //TODO: CsrfAuthenticationStrategy
-                //TODO: .csrfTokenRepository()
-                //TODO: .requireCsrfProtectionMatcher()
-        ;
-
-
-#### 15.02-calendar ####
-CORS Example
-
-
-#### 15.03-calendar ####
-TODO: Maybe work on
-* filter()
-
+***

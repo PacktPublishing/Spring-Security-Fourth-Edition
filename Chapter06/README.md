@@ -1,45 +1,43 @@
-# README #
+# LDAP Directory Services #
 
-## LDAP ##
+***
 
-### Sections ###
+[chapter06.00-calendar](chapter06.00-calendar/README.md)
 
-#### 06.00-calendar ####
-base implementation based on chapter05.05
+***
 
-#### 06.01-calendar ####
-Login using:
-user1@example.com:user1
+[chapter06.01-calendar](chapter06.01-calendar/README.md)
 
-#### 06.02-calendar ####
-Login using:
-shauser@example.com:shauser
+***
 
-#### 06.03-calendar ####
-Login using:
-sshauser@example.com:sshauser
+[chapter06.02-calendar](chapter06.02-calendar/README.md)
 
-#### 06.04-calendar ####
-Login using:
-hasphone@example.com:0123456789
+***
 
-#### 06.05-calendar ####
-Login using:
-shainet@example.com:shainet (inetOrgPerson)
-shaperson@example.com:shaperson (person)
+[chapter06.03-calendar](chapter06.03-calendar/README.md)
 
-#### 06.06-calendar ####
-Login using:
-shainet@example.com:shainet (inetOrgPerson)
-shaperson@example.com:shaperson (person)
+***
 
-#### 06.07-calendar ####
-Login using:shauser@example.com / shauser
+[chapter06.04-calendar](chapter06.04-calendar/README.md)
 
-#### 06.08-calendar ####
-Login using: admin1@example.com / admin1
+***
 
+[chapter06.05-calendar](chapter06.05-calendar/README.md)
 
-#### 06.09-calendar ####
-Login using the created user.
+***
 
+[chapter06.06-calendar](chapter06.06-calendar/README.md)
+
+***
+
+[chapter06.07-calendar](chapter06.07-calendar/README.md)
+
+***
+
+[chapter06.08-calendar](chapter06.08-calendar/README.md)
+
+***
+
+[chapter06.09-calendar](chapter06.09-calendar/README.md)
+
+***

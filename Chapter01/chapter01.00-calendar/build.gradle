@@ -20,7 +20,7 @@ gretty {
 
 dependencyManagement {
 	imports {
-		mavenBom 'org.springframework:spring-framework-bom:6.1.2'
+		mavenBom 'org.springframework:spring-framework-bom:6.1.4'
 	}
 }
 

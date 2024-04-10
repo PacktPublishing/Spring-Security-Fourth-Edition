@@ -1,37 +1,43 @@
-# README #
+# Single Sign-On with the Central Authentication Service #
 
-## CAS
+***
 
-Not done
+[chapter18.00-calendar](chapter18.00-calendar/README.md)
 
+***
 
-## CAS Server Information ##
+[chapter18.00-cas-server](chapter18.00-cas-server/README.md)
 
-### Server project: ###
-git clone  -b 7.0 https://github.com/apereo/cas-overlay-template.git chapter18.00-cas-server
-gradle createKeystore
-gradle build run
+***
 
-### Default URL (SSL Enabled): ###
-https://127.0.0.1:9443/cas/
+[chapter18.01-calendar](chapter18.01-calendar/README.md)
 
+***
 
-### Default URL (SSL disabled): ###
-http://127.0.0.1:9443/cas/
+[chapter18.02-calendar](chapter18.02-calendar/README.md)
 
+***
 
-#### Default login Credentials: ####
-username: casuser
-password: Mellon
+[chapter18.03-calendar](chapter18.03-calendar/README.md)
 
+***
 
-### Sections ###
+[chapter18.04-calendar](chapter18.04-calendar/README.md)
 
-#### 10.00-calendar ####
-BASE Line implementation based on chapter08.03
+***
 
+[chapter18.05-cas-server](chapter18.05-cas-server/README.md)
 
-#### 10.01-calendar ####
-Implementation using standard X509Configurer:
-http.x509().userDetailsService(userDetailsService);
+***
 
+[chapter18.05-calendar](chapter18.05-calendar/README.md)
+
+***
+
+[chapter18.06-cas-server](chapter18.06-cas-server/README.md)
+
+***
+
+[chapter18.06-calendar](chapter18.06-calendar/README.md)
+
+***

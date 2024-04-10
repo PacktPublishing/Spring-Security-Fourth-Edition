@@ -1,0 +1,21 @@
+# chapter05.03-calendar #
+
+Execute the below command using Gradle from the project directory:
+
+```shell
+./gradlew bootRun
+```
+
+Alternatively, if you're using Maven, execute the following command from the project directory:
+
+```shell
+./mvnw spring-boot:run
+```
+
+To test the application, open a web browser and navigate to:
+[http://localhost:8080](http://localhost:8080)
+![img.png](docs/img.png)
+
+The application will not work at this point, but this can still be considered a marker point before we continue on to the next steps of conversion.
+![img.png](docs/img_1.png)
+

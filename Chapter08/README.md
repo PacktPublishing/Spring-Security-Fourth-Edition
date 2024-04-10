@@ -1,28 +1,17 @@
-# README #
+# Client Certificate Authentication with TLS #
 
-## Client Certificate Authentication ##
+***
 
-Complete
+[chapter08.00-calendar](chapter08.00-calendar/README.md)
 
+***
 
-### Sections ###
+[chapter08.01-calendar](chapter08.01-calendar/README.md)
 
-#### 08.00-calendar ####
-BASE Line implementation based on chapter07.08
+***
 
+[chapter08.02-calendar](chapter08.02-calendar/README.md)
 
-#### 08.01-calendar ####
-Implementation using standard X509Configurer:
-http.x509().userDetailsService(userDetailsService);
+***
 
-
-
-#### 08.02-calendar ####
-Implementation including .subjectPrincipalRegex("CN=(.*?),") 
-and Http403ForbiddenEntryPoint
-
-
-
-#### 08.03-calendar ####
-Implementation including X509AuthenticationFilter
-
+[chapter08.03-calendar](chapter08.03-calendar/README.md)
