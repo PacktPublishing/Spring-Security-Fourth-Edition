@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title id="pageTitle">Welcome to myCalendar!</title>
+    <meta name="_csrf" content="4bfd1575-3ad1-4d21-96c7-4ef2d9f86721"/>
+    <meta name="_csrf_header" content="X-CSRF-TOKEN"/>
+    <!--/*/ <th:block th:insert="~{fragments/headerinc :: head}"></th:block> /*/-->
+</head>
+<body>
+
+<div class="container">
+    <!--/*/ <th:block th:insert="~{fragments/header :: header}"></th:block> /*/-->
+
+    <p>Chapter 15.03: Below you can find some highlights about myCalendar. Each sample will have a slightly different summary depending on what has been done.</p>
+    <h2>Reactive support with Spring Security</h2>
+    <ul>
+        <li>The functionality hasn't changed since the last checkpoint, but feel free to
+            give it a try.
+        </li>
+        <li>Select a link that requires authentication and observe the new login page.
+        </li>
+        <li>Try typing an invalid username/password and viewing the error message</li>
+        <li>Try logging in as an admin and viewing all events. Notice we are able to view
+            all the events
+        </li>
+        <li>Try logging in as a regular user and viewing all events (notice we get an
+            access denied)
+        </li>
+        <br>
+        <hr/>
+        <br>
+        <li><a class="link-primary" id="eventsLink" th:href="@{events/}">All Events</a> -
+            shows all events for all users, but only allows administrators to access the
+            page.
+        </li>
+        <li><a class="link-secondary" id="myEventsLink" th:href="@{events/my}">My
+            Events</a> - shows all events that user1@example.com is the owner or attendee.
+            We will discuss in Chapter 3 how to obtain the current user's events.
+        </li>
+        <li><a class="link-success" id="createEventLink" th:href="@{events/form}">Create
+            Event</a> - will allow creating a new Event with user1@example.com as the
+            owner. We will discuss in Chapter 3 how to make the current user the owner.
+        </li>
+        <li><a class="link-danger" id="logoutLink" th:href="@{/logout}" >Logout</a> - we
+            haven't discussed it yet, but you can logout using j_spring_security_logout.
+            Later in in this chapter we will discuss how to customize logout and provide a
+            logout link.
+        </li>
+    </ul>
+
+</div>
+
+<!--/*/ <th:block th:insert="~{fragments/footer :: foot}"></th:block> /*/-->
+
+</body>
+</html>

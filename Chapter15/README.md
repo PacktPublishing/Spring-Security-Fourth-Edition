@@ -13,3 +13,7 @@
 [chapter15.02-calendar](chapter15.02-calendar/README.md)
 
 ***
+
+[chapter15.03-calendar](chapter15.03-calendar/README.md)
+
+***
