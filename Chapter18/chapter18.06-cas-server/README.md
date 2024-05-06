@@ -4,7 +4,21 @@ Ensure that you have the following installed: JDK `21`
 
 Import an CAS SSL certificate inside the JRE keystore of your JBCP calendar application, by running the following command from the following location `chapter18.00-cas-server/src/main/resources/etc/cas`:
 ```shell
-keytool -importcert -file cas.crt -alias cas-server -keystore $JDK_HOME/jre/lib/security/cacerts
+keytool -importcert -file cas.crt -alias cas-server -keystore $JBCP_JAVA_HOME/lib/security/cacerts
+```
+The variable $JBCP_JAVA_HOME is the JVM used by JBCP Calendar application.
+
+To check the import is done successfully, you can run the following command. When asked for the password the keystore password is in general change it.
+
+```shell
+keytool -list -keystore $JBCP_JAVA_HOME -alias cas-server
+```
+
+The output should be similar to following:
+
+```shell
+cas-server, May 6, 2024, trustedCertEntry, 
+Certificate fingerprint (SHA-256): 4C:E5:A1:42:58:78:69:7B:94:05:23:05:23:46:EA:DF:FB:D5:2E:10:4F:C8:90:2D:16:A2:2A:FB:26:99:40:1D
 ```
 
 Execute the below command using Gradle from the project directory:
