@@ -11,7 +11,7 @@ The variable $JBCP_JAVA_HOME is the JVM used by JBCP Calendar application.
 To check the import is done successfully, you can run the following command. When asked for the password the keystore password is in general change it.
 
 ```shell
-keytool -list -keystore $JBCP_JAVA_HOME -alias cas-server
+keytool -list -keystore $JBCP_JAVA_HOME/lib/security/cacerts -alias cas-server
 ```
 
 The output should be similar to following:

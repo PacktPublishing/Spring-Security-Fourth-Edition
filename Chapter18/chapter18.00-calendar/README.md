@@ -10,7 +10,7 @@ The variable $CAS_JAVA_HOME is the JVM used by the CAS Server.
 To check the import is done successfully, you can run the following command. When asked for the password the keystore password is in general change it.
 
 ```shell
-keytool -list -keystore $CAS_JAVA_HOME -alias jbcpcalendar
+keytool -list -keystore $CAS_JAVA_HOME/lib/security/cacerts -alias jbcpcalendar
 ```
 
 The output should be similar to following:
