@@ -57,7 +57,7 @@ With the following software and hardware list you can run all code files present
 
 | Chapter  | Software required                                                          | OS required                      |
 | -------- | ---------------------------------------------------------------------------| ---------------------------------|
-| 1-19     | IntelliJ IDEA and Eclipse are both popular choices forSpring development   | Windows, macOS, or Linux         |
+| 1-19     | IntelliJ IDEA and Eclipse are both popular choices for Spring development  | Windows, macOS, or Linux         |
 | 1-19     | JDK versions: 17 or 21                                                     | Windows, macOS, or Linux         |
 | 1-19     | Spring- Security 6.                                                        | Windows, macOS, or Linux         |
 | 1-19     | Spring- Boot 3.                                                            | Windows, macOS, or Linux         |
