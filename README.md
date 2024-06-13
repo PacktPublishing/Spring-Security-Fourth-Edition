@@ -116,7 +116,7 @@ With the following software and hardware list you can run all code files present
 ## Related products <Other books you may enjoy>
 * Modern API Development with Spring 6 and Spring Boot 3 [[Packt]](https://www.packtpub.com/product/modern-api-development-with-spring-6-and-spring-boot-3-second-edition/9781804613276) [[Amazon]](https://www.amazon.com/dp/1804613274)
 
-* Learning Spring Boot 3.0 [[Packt]](https://www.packtpub.com/product/learning-spring-boot-30-third-edition/9781803233307) [[Amazon]](https://www.amazon.com/dp/1803233303)
+* Learning Spring Boot 3.0 - Third Edition [[Packt]](https://www.packtpub.com/product/learning-spring-boot-30-third-edition/9781803233307) [[Amazon]](https://www.amazon.com/dp/1803233303)
 
 ## Get to Know the Author
 **Badr Nasslahsen**
