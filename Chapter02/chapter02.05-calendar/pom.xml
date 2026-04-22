@@ -17,7 +17,7 @@
 		<logback-classic.version>1.4.12</logback-classic.version>
 		<webjars-locator.version>0.50</webjars-locator.version>
 		<bootstrap.version>5.3.0</bootstrap.version>
-		<thymeleaf-spring6.version>3.1.2.RELEASE</thymeleaf-spring6.version>
+		<thymeleaf-spring6.version>3.1.4.RELEASE</thymeleaf-spring6.version>
 		<thymeleaf-layout-dialect.version>3.3.0</thymeleaf-layout-dialect.version>
 		<thymeleaf-extras.version>3.1.2.RELEASE</thymeleaf-extras.version>
 		<jakarta.servlet-api.version>6.0.0</jakarta.servlet-api.version>
